@@ -29,7 +29,7 @@ glob("markdown/*.md", function (err, files) {
     });
   });
 
-  fs.writeFileSync("data/markdowns.json", JSON.stringify(markdowns, null, 2), {
+  fs.writeFileSync("../data/markdowns.json", JSON.stringify(markdowns, null, 2), {
     encoding: "utf-8",
   });
 });
