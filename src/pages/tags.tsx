@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
-import tags from '../../data/tags.json'
 import Tag from "../components/tag/tag";
 
+import tags from '../../data/tags.json'
+
 const Tags: NextPage = () => (
-  <div>
-    {tags.map((tag: string) => {
-        return <Tag tagName={tag} />
-      })}
+  <div data-testid="tags">
+    {tags.map((tag: string) => (
+      <Tag key={tag} tagName={tag} />
+    ))}
   </div>
 )
 
