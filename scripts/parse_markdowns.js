@@ -30,7 +30,9 @@ glob(path.join(__dirname, '../markdown/*.md'), function (err, files) {
     });
   });
 
-  fs.writeFileSync(path.join(__dirname, '../data') + '/markdowns.json', JSON.stringify(markdowns, null, 2), {
+  const filePath = path.join(__dirname, '../data/markdowns.json')
+
+  fs.writeFileSync(filePath, JSON.stringify(tags, null, 2), {
     encoding: "utf-8",
   });
 });
