@@ -5,9 +5,9 @@ import tags from '../../data/tags.json'
 
 const Tags: NextPage = () => (
   <div data-testid="tags">
-    {tags.map((tag: string, i: number) => {
-        return <Tag tagName={tag} key={i} />
-      })}
+    {tags.map((tag: string) => (
+      <Tag key={tag} tagName={tag} />
+    ))}
   </div>
 )
 
