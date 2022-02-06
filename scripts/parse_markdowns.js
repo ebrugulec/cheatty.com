@@ -1,8 +1,9 @@
 const glob = require("glob");
 const fs = require("fs");
 const slugify = require("slugify");
+const path = require("path")
 
-glob("markdown/*.md", function (err, files) {
+glob(path.join(__dirname, '../markdown/*.md'), function (err, files) {
   const markdowns = [];
 
   if (err) throw (err);
@@ -29,7 +30,7 @@ glob("markdown/*.md", function (err, files) {
     });
   });
 
-  fs.writeFileSync("../data/markdowns.json", JSON.stringify(markdowns, null, 2), {
+  fs.writeFileSync(path.join(__dirname, '../data') + '/markdowns.json', JSON.stringify(markdowns, null, 2), {
     encoding: "utf-8",
   });
 });
