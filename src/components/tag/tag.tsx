@@ -5,7 +5,7 @@ export interface TagProps {
 }
 
 const Tag = ({ tagName }: TagProps) => (
-  <div data-testid="tag-name">
+  <div data-testid="tag-name" className="tag">
     {tagName}
   </div>
 );
