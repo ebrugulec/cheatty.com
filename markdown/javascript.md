@@ -4,7 +4,7 @@ This section is dedicated to the JavaScript language itself, and not the parts t
 
 ### Contributors
 
-- [Ebru Güleç](https://github.com/ebrugule/)
+- [Ebru Güleç](https://github.com/ebrugulec/)
 - [Aykut Kardaş](https://github.com/aykutkardas)
 
 <!--- Tags: [javascript,es6] --->

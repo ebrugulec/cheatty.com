@@ -18,7 +18,7 @@ const [state, dispatch] = useReducer(reducer, initialState, initialDispatch);
 
 ### Contributors
 
-- [Ebru Güleç](https://github.com/ebrugule/)
+- [Ebru Güleç](https://github.com/ebrugulec/)
 - [Aykut Kardaş](https://github.com/aykutkardas)
 
 <!--- Tags: [react,jsx,javascript] --->

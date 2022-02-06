@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "parse-markdowns": "node parse_markdowns.js"
+    "parse-markdowns": "node scripts/parse_markdowns.js",
+    "pick-tags": "node scripts/pick_tags.js"
   },
   "dependencies": {
     "next": "12.0.9",
