@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import react, { useState } from 'react';
 
 import allMarkdowns from '../../data/markdowns.json'
+import Markdown, { MarkdownProps } from "../components/markdown/Markdown";
 import SearchBar from "../components/searchBar/SearchBar";
 
 const Home: NextPage = () => {
@@ -33,6 +34,9 @@ const Home: NextPage = () => {
        value={searchValue}
        onSearchHandle={searchMarkdowns}
       />
+      {markdowns.map((markdown: MarkdownProps) => (
+        <Markdown title={markdown.title} slug={markdown.slug} description={markdown.description} tags={markdown.tags} />
+      ))}
     </div>
   )
 };
