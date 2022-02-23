@@ -12,20 +12,19 @@ const Home: NextPage = () => {
   const searchMarkdowns = (value: string) => {
     setSearchValue(value)
 
-    const searchRegex = new RegExp(value, 'gi');
-
-    let filteredMarkdownWithTitle = allMarkdowns.filter((markdown) => (
-      searchRegex.test(markdown.title)
-    ))
-
-    if (filteredMarkdownWithTitle.length > 0) {
-      setMarkdowns(filteredMarkdownWithTitle)
+    if (value.length === 0) {
+      setMarkdowns(allMarkdowns)
     } else {
-      let filteredMarkdownWithDescription = allMarkdowns.filter((markdown) => (
-        searchRegex.test(markdown.description)
-      ))
+      let searchValueLowerCase = value.toLowerCase()
 
-      setMarkdowns(filteredMarkdownWithDescription)
+      let filteredMarkdowns = allMarkdowns.filter((markdown) => {
+        let title = markdown.title.toLowerCase();
+        let description = markdown.description.toLowerCase();
+
+        return title.includes(searchValueLowerCase) || description.includes(searchValueLowerCase)
+      })
+
+      setMarkdowns(filteredMarkdowns)
     }
   }
   return (
@@ -35,7 +34,12 @@ const Home: NextPage = () => {
        onSearchHandle={searchMarkdowns}
       />
       {markdowns.map((markdown: MarkdownProps) => (
-        <Markdown title={markdown.title} slug={markdown.slug} description={markdown.description} tags={markdown.tags} />
+        <Markdown
+          title={markdown.title}
+          slug={markdown.slug}
+          description={markdown.description}
+          tags={markdown.tags}
+        />
       ))}
     </div>
   )
