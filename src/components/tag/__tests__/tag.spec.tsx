@@ -6,7 +6,7 @@ describe('Tag', () => {
   it('should render tag', () => {
     const tagName = 'JavaScript'
 
-    render(<Tag tagName={tagName} />)
+    render(<Tag name={tagName} count={3} />)
     const tag = screen.getByTestId('tag-name')
 
     expect(tag).toBeInTheDocument()
