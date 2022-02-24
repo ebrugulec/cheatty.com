@@ -11,8 +11,7 @@ markdowns?.forEach(markdown => {
     if (tagIndex >= 0) {
       tags[tagIndex].count = tags[tagIndex].count + 1
     } else {
-      const tag = {name: markdownTag, count: 1}
-      tags.push(tag)
+      tags.push({name: markdownTag, count: 1})
     }
   })
 });

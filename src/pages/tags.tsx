@@ -7,6 +7,7 @@ const Tags: NextPage = () => (
   <div data-testid="tags">
     {tags.map((tag: TagProps) => (
       <Tag
+        key={tag.name}
         name={tag.name}
         count={tag.count}
       />

@@ -47,6 +47,7 @@ const Home: NextPage = () => {
     <div>
       {sortedTags.map((tag: TagProps) => (
         <Tag
+          key={tag.name}
           name={tag.name}
           count={tag.count}
         />
@@ -57,11 +58,11 @@ const Home: NextPage = () => {
       />
       {markdowns.map((markdown: MarkdownProps) => (
         <Markdown
+          key={markdown.slug}
           title={markdown.title}
           slug={markdown.slug}
           description={markdown.description}
           tags={markdown.tags}
-          key={markdown.slug}
         />
       ))}
     </div>
