@@ -9,7 +9,7 @@ export interface MarkdownProps {
 
 const Markdown = ({ title, slug, description, tags }: MarkdownProps) => {
   return (
-    <div>
+    <div key={slug}>
       {title}
     </div>
   );
