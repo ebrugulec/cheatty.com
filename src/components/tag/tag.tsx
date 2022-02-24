@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 
 export interface TagProps {
-	tagName: String
+	name: string,
+  count: number,
 }
 
-const Tag = ({ tagName }: TagProps) => (
-  <div data-testid="tag-name" className="tag">
-    {tagName}
+const Tag = ({ name }: TagProps) => (
+  <div data-testid="tag-name" className="tag" key={name}>
+    {name}
   </div>
 );
 

@@ -1,13 +1,21 @@
 import type { NextPage } from "next";
 import react, { useState } from 'react';
 
-import allMarkdowns from '../../data/markdowns.json'
 import Markdown, { MarkdownProps } from "../components/markdown/Markdown";
 import SearchBar from "../components/searchBar/SearchBar";
+import Tag, { TagProps } from "../components/tag/tag";
+import { sortTags } from "../utils/common";
+
+import allMarkdowns from '../../data/markdowns.json'
+import tags from '../../data/tags.json';
+
+const SLICE_TAG_COUNT = 15
 
 const Home: NextPage = () => {
   const [searchValue, setSearchValue] = useState('');
   const [markdowns, setMarkdowns] = useState(allMarkdowns);
+
+  const sortedTags = sortTags(tags).slice(0, SLICE_TAG_COUNT);
 
   const searchMarkdowns = (value: string) => {
     setSearchValue(value)
@@ -37,6 +45,12 @@ const Home: NextPage = () => {
   }
   return (
     <div>
+      {sortedTags.map((tag: TagProps) => (
+        <Tag
+          name={tag.name}
+          count={tag.count}
+        />
+      ))}
       <SearchBar
        value={searchValue}
        onSearchHandle={searchMarkdowns}
@@ -47,6 +61,7 @@ const Home: NextPage = () => {
           slug={markdown.slug}
           description={markdown.description}
           tags={markdown.tags}
+          key={markdown.slug}
         />
       ))}
     </div>
