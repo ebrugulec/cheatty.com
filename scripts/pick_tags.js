@@ -2,12 +2,16 @@ const fs = require("fs");
 const path = require('path');
 const markdowns = require('../data/markdowns.json')
 
-let tags = [];
+const tags = [];
 
 markdowns?.forEach(markdown => {
-  markdown.tags.forEach((tag) => {
-    if (!tags.includes(tag)) {
-        tags.push(tag)
+  markdown.tags.forEach((markdownTag) => {
+    const tagIndex = tags.findIndex((tag) => tag.name === markdownTag);
+
+    if (tagIndex >= 0) {
+      tags[tagIndex].count = tags[tagIndex].count + 1
+    } else {
+      tags.push({name: markdownTag, count: 1})
     }
   })
 });
