@@ -1,8 +1,6 @@
-import type { NextPage } from "next";
-
 export interface SearchBarProps {
-  value?: string
-	onSearchHandle(value: string): void
+  value?: string;
+  onSearchHandle(value: string): void;
 }
 
 const SearchBar = ({ value, onSearchHandle }: SearchBarProps) => (

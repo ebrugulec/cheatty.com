@@ -1,15 +1,10 @@
-import type { NextPage } from "next";
-
 export interface TagProps {
-	name: string,
-  count: number,
+  name: string;
+  count: number;
 }
 
 const Tag = ({ name }: TagProps) => (
-  <div
-    data-testid="tag-name"
-    className="tag"
-  >
+  <div data-testid="tag-name" className="tag">
     {name}
   </div>
 );
