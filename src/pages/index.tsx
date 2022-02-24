@@ -16,8 +16,8 @@ const Home: NextPage = () => {
       setMarkdowns(allMarkdowns)
     } else {
       const searchValueLowerCase = value.toLowerCase()
-      let filteredMarkdownsWithTitle: MarkdownProps[] = []
-      let filteredMarkdownsWithDescription: MarkdownProps[] = []
+      const filteredMarkdownsWithTitle: MarkdownProps[] = []
+      const filteredMarkdownsWithDescription: MarkdownProps[] = []
 
       allMarkdowns.map((markdown) => {
         const title = markdown.title.toLowerCase();
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         }
       })
 
-      const filteredMarkdowns = filteredMarkdownsWithTitle.concat(filteredMarkdownsWithDescription)
+      const filteredMarkdowns = [...filteredMarkdownsWithTitle, ...filteredMarkdownsWithDescription];
 
       setMarkdowns(filteredMarkdowns)
     }
