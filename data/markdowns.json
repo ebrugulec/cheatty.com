@@ -1,6 +1,15 @@
 [
   {
     "slug": "javascript",
+    "title": "JavaScript 1 des",
+    "description": "This section is dedicated to the JavaScript 1 language itself, and not the parts that are specific to Web pages or other host environments. For information about API specifics to Web pages, please see Web APIs and DOM.",
+    "tags": [
+      "javascript",
+      "es6"
+    ]
+  },
+  {
+    "slug": "javascript",
     "title": "JavaScript",
     "description": "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about API specifics to Web pages, please see Web APIs and DOM.",
     "tags": [
@@ -16,6 +25,33 @@
       "react",
       "jsx",
       "javascript"
+    ]
+  },
+  {
+    "slug": "javascript 1",
+    "title": "JavaScript 1",
+    "description": "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about API specifics to Web pages, please see Web APIs and DOM.",
+    "tags": [
+      "javascript",
+      "es6"
+    ]
+  },
+  {
+    "slug": "javascript 1",
+    "title": "JavaScript 1",
+    "description": "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about API specifics to Web pages, please see Web APIs and DOM.",
+    "tags": [
+      "javascript",
+      "es6"
+    ]
+  },
+  {
+    "slug": "javascript 1",
+    "title": "JavaScript 1",
+    "description": "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about API specifics to Web pages, please see Web APIs and DOM.",
+    "tags": [
+      "javascript",
+      "es6"
     ]
   }
 ]
