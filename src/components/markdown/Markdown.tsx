@@ -5,12 +5,11 @@ export interface MarkdownProps {
   title: string,
   description: string,
   tags: string[],
-  key?: string
 }
 
-const Markdown = ({ key, title, slug, description, tags }: MarkdownProps) => {
+const Markdown = ({ title, slug, description, tags }: MarkdownProps) => {
   return (
-    <div key={key}>
+    <div>
       {title}
     </div>
   );
