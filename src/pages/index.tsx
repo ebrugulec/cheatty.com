@@ -15,14 +15,22 @@ const Home: NextPage = () => {
     if (value.length === 0) {
       setMarkdowns(allMarkdowns)
     } else {
-      let searchValueLowerCase = value.toLowerCase()
+      const searchValueLowerCase = value.toLowerCase()
+      let filteredMarkdownsWithTitle: MarkdownProps[] = []
+      let filteredMarkdownsWithDescription: MarkdownProps[] = []
 
-      let filteredMarkdowns = allMarkdowns.filter((markdown) => {
-        let title = markdown.title.toLowerCase();
-        let description = markdown.description.toLowerCase();
+      allMarkdowns.map((markdown) => {
+        const title = markdown.title.toLowerCase();
+        const description = markdown.description.toLowerCase();
 
-        return title.includes(searchValueLowerCase) || description.includes(searchValueLowerCase)
+        if(title.includes(searchValueLowerCase)) {
+          filteredMarkdownsWithTitle.push(markdown)
+        } else if (description.includes(searchValueLowerCase)) {
+          filteredMarkdownsWithDescription.push(markdown)
+        }
       })
+
+      const filteredMarkdowns = filteredMarkdownsWithTitle.concat(filteredMarkdownsWithDescription)
 
       setMarkdowns(filteredMarkdowns)
     }
