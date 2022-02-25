@@ -22,17 +22,32 @@ glob(path.join(__dirname, '../markdown/*.md'), function (err, files) {
       tags = tagsResult[1].split(',').map(i => i.trim()).filter(i => i);
     }
 
-    markdowns.push({
+    const content = fileContent.replace(`${tagsResult[0]}\n`, '')
+
+    const markdown = {
       slug,
       title,
       description,
       tags
+    }
+
+    markdowns.push(markdown);
+
+    const markdownWithContent = {
+      ...markdown,
+      content
+    }
+
+    const filePath = path.join(__dirname, `../content/${slug}.json`)
+
+    fs.writeFileSync(filePath, JSON.stringify(markdownWithContent, null, 2), {
+      encoding: "utf-8",
     });
   });
 
-  const filePath = path.join(__dirname, '../data/markdowns.json')
+  const markdownsFilePath = path.join(__dirname, '../data/markdowns.json')
 
-  fs.writeFileSync(filePath, JSON.stringify(markdowns, null, 2), {
+  fs.writeFileSync(markdownsFilePath, JSON.stringify(markdowns, null, 2), {
     encoding: "utf-8",
   });
 });
