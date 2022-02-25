@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from 'next/link'
 
 export interface MarkdownProps {
   slug: string,
@@ -9,9 +10,11 @@ export interface MarkdownProps {
 
 const Markdown = ({ title, slug, description, tags }: MarkdownProps) => {
   return (
-    <div>
-      {title}
-    </div>
+    <Link href={`/cheatsheet/${slug}`}>
+      <div>
+        {title}
+      </div>
+    </Link>
   );
 };
 

@@ -1,64 +1,15 @@
 import type { NextPage } from "next";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { MarkdownProps } from "../components/markdown/Markdown";
 
-const testMarkdownContent = `
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-
-Content Lorem Ipsum...
-
-\`higlight\` text
-
-*italic*
-
-**bold**
-
-JS code sample
-~~~js
-const value = 21;
-~~~
-
-CSS code sample
-
-~~~css
-div {
-  border: 1px solid gray;
+export interface MarkdownPropsWithContent extends MarkdownProps {
+  content: string
 }
-~~~
-
-
-JSX code sample
-
-~~~jsx
-<Button onClick={handleClick}>Click</Button>
-~~~
-
-
-BASH code sample
-
-~~~bash
-mkdir directory
-cd directory
-touch test.txt
-~~~
-
-
-SQL code sample
-
-~~~sql
-SELECT * FROM Customers WHERE Country='Mexico';
-~~~
-`;
-
-const Home: NextPage = () => {
+const Markdown = ({ content }: MarkdownPropsWithContent) => {
   return (
     <div>
-      Markdown Test!
+    {content &&
       <ReactMarkdown
         components={{
           code({ node, inline, className, children, ...props }) {
@@ -75,10 +26,12 @@ const Home: NextPage = () => {
           },
         }}
       >
-        {testMarkdownContent}
+        {content}
       </ReactMarkdown>
+    
+    }
     </div>
   );
 };
 
-export default Home;
+export default Markdown;
