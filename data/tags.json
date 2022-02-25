@@ -1,6 +1,18 @@
 [
-  "javascript",
-  "es6",
-  "react",
-  "jsx"
+  {
+    "name": "javascript",
+    "count": 2
+  },
+  {
+    "name": "es6",
+    "count": 1
+  },
+  {
+    "name": "react",
+    "count": 1
+  },
+  {
+    "name": "jsx",
+    "count": 1
+  }
 ]
