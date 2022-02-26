@@ -37,7 +37,7 @@ export default CheatsheetDetail;
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   try {
-    const markdown = await import(`../../../content/${query.slug}.json`);
+    const markdown = await import(`../../content/${query.slug}.json`);
     const { content, slug, title, description, tags } = markdown;
 
     return {
