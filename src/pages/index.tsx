@@ -48,21 +48,24 @@ const Home: NextPage = () => {
       setMarkdowns(filteredMarkdowns);
     }
   };
+
   return (
-    <div>
+    <div className="homepage">
       {sortedTags.map((tag: TagProps) => (
         <Tag key={tag.name} name={tag.name} count={tag.count} />
       ))}
       <SearchBar value={searchValue} onSearchHandle={searchMarkdowns} />
-      {markdowns.map((markdown: MarkdownProps) => (
-        <Markdown
-          key={markdown.slug}
-          title={markdown.title}
-          slug={markdown.slug}
-          description={markdown.description}
-          tags={markdown.tags}
-        />
-      ))}
+      <div className="results">
+        {markdowns.map((markdown: MarkdownProps) => (
+          <Markdown
+            key={markdown.slug}
+            title={markdown.title}
+            slug={markdown.slug}
+            description={markdown.description}
+            tags={markdown.tags}
+          />
+        ))}
+      </div>
     </div>
   );
 };
