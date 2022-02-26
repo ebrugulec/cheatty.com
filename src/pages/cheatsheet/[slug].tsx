@@ -3,12 +3,19 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { MarkdownPropsWithContent } from "../../components/markdownPreview/MarkdownPreview";
 
-const CheatsheetDetail = ({ content, slug, title, description, tags, error }: MarkdownPropsWithContent) => {
+const CheatsheetDetail = ({
+  content,
+  slug,
+  title,
+  description,
+  tags,
+  error,
+}: MarkdownPropsWithContent) => {
   return (
     <div>
-      {error ?
+      {error ? (
         <div>{error}</div>
-        :
+      ) : (
         <ReactMarkdown
           components={{
             code({ node, inline, className, children, ...props }) {
@@ -27,7 +34,7 @@ const CheatsheetDetail = ({ content, slug, title, description, tags, error }: Ma
         >
           {content}
         </ReactMarkdown>
-      }
+      )}
     </div>
   );
 };
@@ -45,14 +52,14 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
         slug,
         title,
         description,
-        tags
+        tags,
       },
     };
   } catch {
-      return {
-        props: {
-          error: 'Something went wrong.'
-        }
-      }
+    return {
+      props: {
+        error: "Something went wrong.",
+      },
+    };
   }
 };
