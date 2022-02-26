@@ -10,6 +10,7 @@ import { sortTags } from "../utils/common";
 
 import allMarkdowns from "../../data/markdowns.json";
 import tags from "../../data/tags.json";
+import Header from "../components/Header/Header";
 
 const SLICE_TAG_COUNT = 15;
 
@@ -51,6 +52,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="homepage">
+      <Header />
       {sortedTags.map((tag: TagProps) => (
         <Tag key={tag.name} name={tag.name} count={tag.count} />
       ))}
