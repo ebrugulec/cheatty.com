@@ -3,9 +3,9 @@ import React, { useState } from "react";
 
 import Markdown, {
   MarkdownProps,
-} from "../components/markdownPreview/MarkdownPreview";
-import SearchBar from "../components/searchBar/SearchBar";
-import Tag, { TagProps } from "../components/tag/tag";
+} from "../components/MarkdownPreview/MarkdownPreview";
+import SearchBar from "../components/SearchBar/SearchBar";
+import Tag, { TagProps } from "../components/Tag/Tag";
 import { sortTags } from "../utils/common";
 
 import allMarkdowns from "../../data/markdowns.json";

@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Tags from "../pages/tags";
-import { TagProps } from "../components/tag/tag";
+import { TagProps } from "../components/Tag/Tag";
 
 const markdownTags: TagProps[] = [
   {
