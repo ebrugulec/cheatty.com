@@ -52,7 +52,6 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.homepage}>
-      <Header />
       <SearchBar value={searchValue} onSearchHandle={searchMarkdowns} />
       <div className={styles.tagList}>
         {sortedTags.map((tag: TagProps) => (
