@@ -55,7 +55,7 @@ const Home: NextPage = () => {
         <Tag key={tag.name} name={tag.name} count={tag.count} />
       ))}
       <SearchBar value={searchValue} onSearchHandle={searchMarkdowns} />
-      <div className="results">
+      <div className="markdown-list">
         {markdowns.map((markdown: MarkdownProps) => (
           <Markdown
             key={markdown.slug}
