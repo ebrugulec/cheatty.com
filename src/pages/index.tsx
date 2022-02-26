@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import react, { useState } from 'react';
 
-import Markdown, { MarkdownProps } from "../components/markdown/Markdown";
+import Markdown, { MarkdownProps } from "../components/markdownPreview/MarkdownPreview";
 import SearchBar from "../components/searchBar/SearchBar";
 import Tag, { TagProps } from "../components/tag/tag";
 import { sortTags } from "../utils/common";
