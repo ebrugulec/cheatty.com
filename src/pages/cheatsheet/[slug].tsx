@@ -1,38 +1,46 @@
-import type { NextPage } from "next";
-import react, { useEffect, useState } from 'react';
-import { useRouter } from "next/router";
+import type { GetServerSideProps } from "next";
 import Markdown, { MarkdownPropsWithContent } from '../markdown'
 
-const CheatsheetDetail: NextPage = () => {
-  const { query } = useRouter();
-  const [markdown, setMarkdown] = useState<MarkdownPropsWithContent>()
-
-  useEffect(() => {
-    import(`../../../content/${query.slug}.json`)
-      .then((data) => {
-        console.log('data', data)
-        setMarkdown(data)
-
-      })
-      .catch(console.error);
-  }, [query])
-
+const CheatsheetDetail = ({ content, slug, title, description, tags, error }: MarkdownPropsWithContent) => {
   return (
     <div>
-      {markdown ?
-        <Markdown
-          key={markdown.slug}
-          content={markdown.content}
-          title={markdown.title}
-          slug={markdown.slug}
-          description={markdown.description}
-          tags={markdown.tags}
-        />
+      {error ?
+        <div>{error}</div>
         :
-        <div>Markdown not found</div>
+        <Markdown
+          key={slug}
+          content={content}
+          title={title}
+          slug={slug}
+          description={description}
+          tags={tags}
+        />
       }
     </div>
   );
 };
 
 export default CheatsheetDetail;
+
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  try {
+    const markdown = await import(`../../../content/${query.slug}.json`);
+    const { content, slug, title, description, tags } = markdown;
+
+    return {
+      props: {
+        content,
+        slug,
+        title,
+        description,
+        tags
+      },
+    };
+  } catch {
+      return {
+        props: {
+          error: 'Something went wrong.'
+        }
+      }
+  }
+};

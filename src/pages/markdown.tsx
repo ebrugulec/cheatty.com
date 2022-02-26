@@ -4,7 +4,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { MarkdownProps } from "../components/markdown/Markdown";
 
 export interface MarkdownPropsWithContent extends MarkdownProps {
-  content: string
+  content: string,
+  error?: string
 }
 const Markdown = ({ content }: MarkdownPropsWithContent) => {
   return (
