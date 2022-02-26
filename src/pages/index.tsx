@@ -53,10 +53,12 @@ const Home: NextPage = () => {
   return (
     <div className="homepage">
       <Header />
-      {sortedTags.map((tag: TagProps) => (
-        <Tag key={tag.name} name={tag.name} count={tag.count} />
-      ))}
       <SearchBar value={searchValue} onSearchHandle={searchMarkdowns} />
+      <div className="tag-list">
+        {sortedTags.map((tag: TagProps) => (
+          <Tag key={tag.name} name={tag.name} count={tag.count} />
+        ))}
+      </div>
       <div className="markdown-list">
         {markdowns.map((markdown: MarkdownProps) => (
           <Markdown

@@ -4,12 +4,15 @@ export interface SearchBarProps {
 }
 
 const SearchBar = ({ value, onSearchHandle }: SearchBarProps) => (
-  <input
-    placeholder="Search..."
-    value={value}
-    onChange={(e) => onSearchHandle(e.target.value)}
-    data-testid="search-bar"
-  />
+  <div className="search-wrapper">
+    <input
+      placeholder="Search..."
+      className="search-bar"
+      value={value}
+      onChange={(e) => onSearchHandle(e.target.value)}
+      data-testid="search-bar"
+    />
+  </div>
 );
 
 export default SearchBar;
