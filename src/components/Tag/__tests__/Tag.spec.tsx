@@ -1,12 +1,12 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Tag from "../Tag";
+import Tag from "..";
 
 describe("Tag", () => {
   it("should render tag", () => {
     const tagName = "JavaScript";
 
-    render(<Tag name={tagName} count={3} />);
+    render(<Tag name={tagName} />);
     const tag = screen.getByTestId("tag-name");
 
     expect(tag).toBeInTheDocument();

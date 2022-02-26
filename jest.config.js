@@ -9,6 +9,9 @@ module.exports = {
     "^.+\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
     "^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$":
       "<rootDir>/__mocks__/fileMock.js",
+    "^@utils/?(.*)$": "<rootDir>/src/utils/$1",
+    "^@data/?(.*)$": "<rootDir>/src/data/$1",
+    "^@components/?(.*)$": "<rootDir>/src/components/$1",
   },
   testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/.next/"],
   testEnvironment: "jsdom",

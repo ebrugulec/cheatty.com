@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 
-import Tag, { TagProps } from "../components/Tag/Tag";
+import Tag, { TagProps } from "../components/Tag";
 
-import tags from "../../data/tags.json";
+import tags from "@data/tags.json";
 
 const Tags: NextPage = () => (
   <div data-testid="tags">

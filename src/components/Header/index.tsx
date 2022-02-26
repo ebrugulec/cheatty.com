@@ -1,5 +1,7 @@
+import styles from "./Header.module.scss";
+
 const Header = () => (
-  <header data-testid="header" className="header">
+  <header data-testid="header" className={styles.header}>
     <img
       className="logo"
       width={300}
