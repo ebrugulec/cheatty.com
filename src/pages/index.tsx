@@ -3,13 +3,14 @@ import React, { useState } from "react";
 
 import Markdown, {
   MarkdownProps,
-} from "../components/markdownPreview/MarkdownPreview";
-import SearchBar from "../components/searchBar/SearchBar";
-import Tag, { TagProps } from "../components/tag/tag";
+} from "../components/MarkdownPreview/MarkdownPreview";
+import SearchBar from "../components/SearchBar/SearchBar";
+import Tag, { TagProps } from "../components/Tag/Tag";
 import { sortTags } from "../utils/common";
 
 import allMarkdowns from "../../data/markdowns.json";
 import tags from "../../data/tags.json";
+import Header from "../components/Header/Header";
 
 const SLICE_TAG_COUNT = 15;
 
@@ -51,6 +52,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="homepage">
+      <Header />
       {sortedTags.map((tag: TagProps) => (
         <Tag key={tag.name} name={tag.name} count={tag.count} />
       ))}

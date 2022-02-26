@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import Tag, { TagProps } from "../components/tag/tag";
+import Tag, { TagProps } from "../components/Tag/Tag";
 
 import tags from "../../data/tags.json";
 
