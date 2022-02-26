@@ -8,7 +8,12 @@ export interface MarkdownProps {
   tags: string[],
 }
 
-const Markdown = ({ title, slug, description, tags }: MarkdownProps) => {
+export interface MarkdownPropsWithContent extends MarkdownProps {
+  content: string,
+  error?: string
+}
+
+const MarkdownPreview = ({ title, slug, description, tags }: MarkdownProps) => {
   return (
     <Link href={`/cheatsheet/${slug}`}>
       <div>
@@ -18,4 +23,4 @@ const Markdown = ({ title, slug, description, tags }: MarkdownProps) => {
   );
 };
 
-export default Markdown;
+export default MarkdownPreview;
