@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Tag.module.scss";
 
 export interface TagProps {
@@ -6,9 +7,11 @@ export interface TagProps {
 }
 
 const Tag = ({ name }: { name: string }) => (
-  <div data-testid="tag-name" className={styles.tag}>
-    {name}
-  </div>
+  <Link href={`/tag/${name}`}>
+    <div data-testid="tag-name" className={styles.tag}>
+      {name}
+    </div>
+  </Link>
 );
 
 export default Tag;
