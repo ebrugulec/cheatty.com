@@ -8,7 +8,6 @@ import { sortTags } from "@utils/common";
 
 import tags from "@data/tags.json";
 import allMarkdowns from "@data/markdowns.json";
-import Header from "@components/Header";
 
 import styles from "./Home.module.scss";
 
