@@ -6,12 +6,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "check-types": "tsc --pretty --noEmit",
-    "check-format": "prettier --check .",
-    "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
     "parse-markdowns": "node scripts/parse_markdowns.js",
     "pick-tags": "node scripts/pick_tags.js",
+    "parse": "yarn parse-markdowns && yarn pick-tags",
     "test": "jest",
     "prepare": "husky install"
   },

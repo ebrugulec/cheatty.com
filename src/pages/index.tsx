@@ -1,16 +1,16 @@
 import type { NextPage } from "next";
 import React, { useState } from "react";
 
-import Markdown, {
-  MarkdownProps,
-} from "../components/MarkdownPreview/MarkdownPreview";
-import SearchBar from "../components/SearchBar/SearchBar";
-import Tag, { TagProps } from "../components/Tag/Tag";
-import { sortTags } from "../utils/common";
+import Markdown, { MarkdownProps } from "@components/MarkdownPreview";
+import SearchBar from "@components/SearchBar";
+import Tag, { TagProps } from "@components/Tag";
+import { sortTags } from "@utils/common";
 
-import allMarkdowns from "../../data/markdowns.json";
-import tags from "../../data/tags.json";
-import Header from "../components/Header/Header";
+import tags from "@data/tags.json";
+import allMarkdowns from "@data/markdowns.json";
+import Header from "@components/Header";
+
+import styles from "./Home.module.scss";
 
 const SLICE_TAG_COUNT = 15;
 
@@ -51,15 +51,15 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="homepage">
+    <div className={styles.homepage}>
       <Header />
       <SearchBar value={searchValue} onSearchHandle={searchMarkdowns} />
-      <div className="tag-list">
+      <div className={styles.tagList}>
         {sortedTags.map((tag: TagProps) => (
-          <Tag key={tag.name} name={tag.name} count={tag.count} />
+          <Tag key={tag.name} name={tag.name} />
         ))}
       </div>
-      <div className="markdown-list">
+      <div className={styles.markdownList}>
         {markdowns.map((markdown: MarkdownProps) => (
           <Markdown
             key={markdown.slug}

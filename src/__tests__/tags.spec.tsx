@@ -1,7 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+
 import Tags from "../pages/tags";
-import { TagProps } from "../components/Tag/Tag";
+import { TagProps } from "@components/Tag";
 
 const markdownTags: TagProps[] = [
   {
@@ -22,7 +23,7 @@ const markdownTags: TagProps[] = [
   },
 ];
 
-jest.mock("../../data/tags.json", () => markdownTags);
+jest.mock("../data/tags.json", () => markdownTags);
 
 describe("Tag", () => {
   it("should component render corretly", () => {

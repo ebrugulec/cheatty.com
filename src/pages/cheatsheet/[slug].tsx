@@ -1,16 +1,10 @@
 import type { GetServerSideProps } from "next";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { MarkdownPropsWithContent } from "../../components/MarkdownPreview/MarkdownPreview";
 
-const CheatsheetDetail = ({
-  content,
-  slug,
-  title,
-  description,
-  tags,
-  error,
-}: MarkdownPropsWithContent) => {
+import { MarkdownPropsWithContent } from "@components/MarkdownPreview";
+
+const CheatsheetDetail = ({ content, error }: MarkdownPropsWithContent) => {
   return (
     <div>
       {error ? (
@@ -18,7 +12,7 @@ const CheatsheetDetail = ({
       ) : (
         <ReactMarkdown
           components={{
-            code({ node, inline, className, children, ...props }) {
+            code({ inline, className, children, ...props }) {
               const match = /language-(\w+)/.exec(className || "");
               return !inline && match ? (
                 <SyntaxHighlighter language={match[1]} PreTag="div" {...props}>

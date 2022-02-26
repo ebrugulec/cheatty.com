@@ -3,7 +3,7 @@ const fs = require("fs");
 const slugify = require("slugify");
 const path = require("path");
 
-glob(path.join(__dirname, "../markdown/*.md"), function (err, files) {
+glob(path.join(__dirname, "../src/markdown/*.md"), function (err, files) {
   const markdowns = [];
 
   if (err) throw err;
@@ -41,14 +41,14 @@ glob(path.join(__dirname, "../markdown/*.md"), function (err, files) {
       content,
     };
 
-    const filePath = path.join(__dirname, `../content/${slug}.json`);
+    const filePath = path.join(__dirname, `../src/content/${slug}.json`);
 
     fs.writeFileSync(filePath, JSON.stringify(markdownWithContent, null, 2), {
       encoding: "utf-8",
     });
   });
 
-  const markdownsFilePath = path.join(__dirname, "../data/markdowns.json");
+  const markdownsFilePath = path.join(__dirname, "../src/data/markdowns.json");
 
   fs.writeFileSync(markdownsFilePath, JSON.stringify(markdowns, null, 2), {
     encoding: "utf-8",

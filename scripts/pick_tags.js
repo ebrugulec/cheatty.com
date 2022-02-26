@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const markdowns = require("../data/markdowns.json");
+const markdowns = require("../src/data/markdowns.json");
 
 const tags = [];
 
@@ -16,7 +16,7 @@ markdowns?.forEach((markdown) => {
   });
 });
 
-const filePath = path.join(__dirname, "../data/tags.json");
+const filePath = path.join(__dirname, "../src/data/tags.json");
 
 fs.writeFileSync(filePath, JSON.stringify(tags, null, 2), {
   encoding: "utf-8",

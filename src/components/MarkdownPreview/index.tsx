@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+import Tag from "@components/Tag";
+
+import styles from "./MarkdownPreview.module.scss";
+
 export interface MarkdownProps {
   slug: string;
   title: string;
@@ -15,14 +19,12 @@ export interface MarkdownPropsWithContent extends MarkdownProps {
 const MarkdownPreview = ({ title, slug, description, tags }: MarkdownProps) => {
   return (
     <Link href={`/cheatsheet/${slug}`}>
-      <div className="cheatsheet-card">
+      <div className={styles.cheatsheetCard}>
         <h4>{title}</h4>
         <p>{description}</p>
-        <div className="tags">
+        <div className={styles.tags}>
           {tags.map((tag) => (
-            <div key={tag} className="tag">
-              {tag}
-            </div>
+            <Tag key={tag} name={tag} />
           ))}
         </div>
       </div>
