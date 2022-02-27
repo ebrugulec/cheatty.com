@@ -14,7 +14,7 @@ const Footer = () => (
         <Icon icon="github" size={20} color="black" />
       </a>
     </div>
-    <div className="content">Awesome Cheat Sheets</div>
+    <div className={styles.content}>Awesome Cheat Sheets</div>
   </footer>
 );
 
