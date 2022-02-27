@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  .socialLinks {
+    margin-bottom: 10px;
+  }
+
+  .content {
+    margin-bottom: 10px;
+  }
+}
