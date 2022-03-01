@@ -4,9 +4,11 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 import { MarkdownPropsWithContent } from "@components/MarkdownPreview";
 
+import styles from "./Cheatsheet.module.scss";
+
 const CheatsheetDetail = ({ content, error }: MarkdownPropsWithContent) => {
   return (
-    <div>
+    <div className={styles.page}>
       {error ? (
         <div>{error}</div>
       ) : (

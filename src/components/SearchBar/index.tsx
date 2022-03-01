@@ -8,7 +8,7 @@ export interface SearchBarProps {
 const SearchBar = ({ value, onSearchHandle }: SearchBarProps) => (
   <div className={styles.searchWrapper}>
     <input
-      placeholder="Search..."
+      placeholder="Search cheatsheet..."
       className={styles.searchBar}
       value={value}
       onChange={(e) => onSearchHandle(e.target.value)}
