@@ -19,15 +19,17 @@ export interface MarkdownPropsWithContent extends MarkdownProps {
 const MarkdownPreview = ({ title, slug, description, tags }: MarkdownProps) => {
   return (
     <Link href={`/cheatsheet/${slug}`}>
-      <div className={styles.cheatsheetCard}>
-        <h4>{title}</h4>
-        <p>{description}</p>
-        <div className={styles.tags}>
-          {tags.map((tag) => (
-            <Tag key={tag} name={tag} />
-          ))}
+      <a>
+        <div className={styles.cheatsheetCard}>
+          <h4>{title}</h4>
+          <p>{description}</p>
+          <div className={styles.tags}>
+            {tags.map((tag) => (
+              <Tag key={tag} name={tag} />
+            ))}
+          </div>
         </div>
-      </div>
+      </a>
     </Link>
   );
 };

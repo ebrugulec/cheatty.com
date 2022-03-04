@@ -1,10 +1,12 @@
 .searchWrapper {
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #eee;
 
   .searchBar {
-    width: 900px;
+    width: 500px;
     max-width: 90%;
     height: 40px;
     padding: 12px;
