@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
-export type DarkModeState = 'dark' | 'light'
-export type SetDarkModeState = React.Dispatch<React.SetStateAction<DarkModeState>>
+export type DarkModeState = "dark" | "light";
+export type SetDarkModeState = React.Dispatch<
+  React.SetStateAction<DarkModeState>
+>;
 
 function useDarkMode() {
   const [theme, setTheme] = useState<DarkModeState>(
@@ -20,7 +22,7 @@ function useDarkMode() {
     }
   }, [theme]);
 
-  return [colorTheme, setTheme] as const
+  return [colorTheme, setTheme] as const;
 }
 
 export default useDarkMode;

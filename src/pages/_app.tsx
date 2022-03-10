@@ -10,11 +10,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [colorTheme, setTheme] = useDarkMode();
 
   return (
-      <div className="app">
-        <Header theme={colorTheme} setTheme={setTheme}  />
-        <Component {...pageProps} />
-        <Footer />
-      </div>
+    <div className="app">
+      <Header theme={colorTheme} setTheme={setTheme} />
+      <Component {...pageProps} />
+      <Footer />
+    </div>
   );
 }
 
