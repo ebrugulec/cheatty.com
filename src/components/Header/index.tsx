@@ -1,9 +1,18 @@
 import Link from "next/link";
+import Icon from "../Icon";
 
 import styles from "./Header.module.scss";
+import { DarkModeState, SetDarkModeState } from 'hooks/UseDarkMode';
 
-const Header = () => (
-  <header data-testid="header" className={styles.header}>
+const Header = ({
+  theme,
+  setTheme
+}: {
+  theme: DarkModeState
+  setTheme: SetDarkModeState
+}) => {
+  return (
+    <header data-testid="header" className={styles.header}>
     <Link href="/">
       <a>
         <img
@@ -16,7 +25,14 @@ const Header = () => (
       </a>
     </Link>
     <div>Awesome Cheat Sheets</div>
-  </header>
-);
+    {theme === "light" ?(
+      <Icon icon="sun" size={25} color="black" onClick={() => setTheme("light")} />
+    ) : (
+      <Icon icon="moon-fill" size={18} color="black" onClick={() => setTheme("dark")} />
+      )
+    }
+    </header>
+  )
+};
 
 export default Header;
