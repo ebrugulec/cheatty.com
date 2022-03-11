@@ -18,6 +18,6 @@ markdowns?.forEach((markdown) => {
 
 const filePath = path.join(__dirname, "../src/data/tags.json");
 
-fs.writeFileSync(filePath, JSON.stringify(tags, null, 2), {
+fs.writeFileSync(filePath, `${JSON.stringify(tags, null, 2)}\n`, {
   encoding: "utf-8",
 });

@@ -43,14 +43,18 @@ glob(path.join(__dirname, "../src/markdown/*.md"), function (err, files) {
 
     const filePath = path.join(__dirname, `../src/content/${slug}.json`);
 
-    fs.writeFileSync(filePath, JSON.stringify(markdownWithContent, null, 2), {
-      encoding: "utf-8",
-    });
+    fs.writeFileSync(
+      filePath,
+      `${JSON.stringify(markdownWithContent, null, 2)}\n`,
+      { encoding: "utf-8" }
+    );
   });
 
   const markdownsFilePath = path.join(__dirname, "../src/data/markdowns.json");
 
-  fs.writeFileSync(markdownsFilePath, JSON.stringify(markdowns, null, 2), {
-    encoding: "utf-8",
-  });
+  fs.writeFileSync(
+    markdownsFilePath,
+    `${JSON.stringify(markdowns, null, 2)}\n`,
+    { encoding: "utf-8" }
+  );
 });
