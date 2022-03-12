@@ -1,0 +1,9 @@
+{
+  "slug": "ssh-cheat-sheet",
+  "title": "SSH Cheat Sheet",
+  "description": "List of shh commands",
+  "tags": [
+    "shh"
+  ],
+  "content": "# SSH Cheat Sheet\n\nList of shh commands\n\n## Install\n\n_Note:_ The following documents the way how [the article: How To Set Up SSH Keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2) sets up ssh keys.\n\n1. `ssh-keygen -t rsa`: create the RSA key pair\n2. store the keys and passphrase: by default, it is `~/.ssh/id_rsa`\n3. `ssh-copy-id <user>@<ip>` or `ssh-copy-id <user>@<hostname>`: copy the public key onto the remote server\n\nNow you can login via `ssh <user>@<ip>` or `ssh <user>@<hostname>` _without_ entering password every time.\n\n## Usages\n\n- `ssh <user>@<host>`: login\n- `service ssh restart`: restart\n\n## Files\n\n- `scp file user@host:/path/to/write_file/`: Copy file to remote host\n- `scp user@host:/path/to/file /path/to/write_file/`: Download file from remote host\n- `echo 'Some Text' | ssh user@remotehost \"cat > /remotefile.txt\"`: [Write to remote host](http://superuser.com/a/400720)\n\n### Resources\n- [cheat-sheets](https://github.com/hengxin/cheat-sheets/)\n\n"
+}
