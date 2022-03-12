@@ -24,6 +24,7 @@ Now you can login via `ssh <user>@<ip>` or `ssh <user>@<hostname>` _without_ ent
 - `echo 'Some Text' | ssh user@remotehost "cat > /remotefile.txt"`: [Write to remote host](http://superuser.com/a/400720)
 
 ### Resources
+
 - [cheat-sheets](https://github.com/hengxin/cheat-sheets/)
 
 <!--- Tags: [shh] --->

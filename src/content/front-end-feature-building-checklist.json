@@ -2,9 +2,6 @@
   "slug": "front-end-feature-building-checklist",
   "title": "Front End Feature Building Checklist",
   "description": "Front End Feature Building Checklist",
-  "tags": [
-    "frontend",
-    "checklist"
-  ],
+  "tags": ["frontend", "checklist"],
   "content": "# Front End Feature Building Checklist\n\nFront End Feature Building Checklist\n\n## Before Building\n\n- [ ] Have clear idea of the business requirements\n- [ ] Get UX/UI designer's mock ups and understand what the designer's visions are, and how they fit in our current design system\n- [ ] Understand the current design system, and what are the possible impacts for current layouts\n\n## During Development Process\n\n- [ ] Have conistent naming convention, preferablly enforced by a linter (e.g. eslint)\n- [ ] Used preferred way for layouts (grid > flexbox > absolute/relative position)\n- [ ] Consolidate similar elements or make them re-usable\n- [ ] The boy scout rule: everywhere you touched is cleaner than before\n- [ ] [SOLID](https://en.wikipedia.org/wiki/SOLID) and [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)?\n\n## Before Testing/QA\n\n- [ ] Created pull request for code review\n- [ ] Check in different browsers (Check on Chrome, FireFox, Safari, Edge)\n- [ ] Check in native apps (iOS/Android)\n- [ ] Works well in different break points (Mobile, Tablet, Desktop) and different length of text sizes\n- [ ] Check voice over in Safari for your feature\n- [ ] Profile in ChromeDevTool to see any performance issues\n- [ ] Check color contrast\n- [ ] Add unit tests to your feature\n- [ ] Add documentation for future/peer developers\n\n## Before Deployment\n\n- [ ] Feature branch is synchronized with master\n- [ ] Add configuration changes\n\n## After Deployment\n\n- [ ] 🎉 Celebrate and watch what kind of impact/usage the feature going to bring.\n\n## Resources\n- [front-end-building-checklist](https://github.com/soleo/front-end-building-checklist/blob/master/README.md)\n\n"
 }

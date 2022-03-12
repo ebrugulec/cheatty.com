@@ -194,6 +194,7 @@ server {
 ```
 
 ### Resources
+
 - [Nginx Cheat Sheet](https://gist.github.com/carlessanagustin/9509d0d31414804da03b)
 
 <!--- Tags: [nginx] --->

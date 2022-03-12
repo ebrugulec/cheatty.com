@@ -3,191 +3,126 @@
     "slug": "api-security-checklist",
     "title": "API Security Checklist",
     "description": "Checklist of the most important security countermeasures when designing, testing, and releasing your API.",
-    "tags": [
-      "api",
-      "security",
-      "checklist"
-    ]
+    "tags": ["api", "security", "checklist"]
   },
   {
     "slug": "code-review-checklist-for-frontend-developers",
     "title": "Code Review Checklist for FrontEnd Developers",
     "description": "The goal is not to define a formal definition of practices for code review but to give some checklist for reviewers. ",
-    "tags": [
-      "frontend",
-      "code review",
-      "checklist"
-    ]
+    "tags": ["frontend", "code review", "checklist"]
   },
   {
     "slug": "congress-checklist",
     "title": "Congress Checklist",
     "description": "List of things to do, to pack and tips on attending a congress, conference or other event, especially Chaos Communication Congress.",
-    "tags": [
-      "congress",
-      "checklist"
-    ]
+    "tags": ["congress", "checklist"]
   },
   {
     "slug": "critical-incidents-checklist",
     "title": "Critical Incidents Checklist",
     "description": "Useful checklist for dealing with recovery crisis.",
-    "tags": [
-      "checklist"
-    ]
+    "tags": ["checklist"]
   },
   {
     "slug": "estimation-checklist",
     "title": "Estimation Checklist",
     "description": "This is not an estimation methedology or a replacement for good practices. it is a simple collaborative checklist of questions that one should remember to ask when preforming such an estimation of a project or large-grained features. Some of these might not apply to you or have no answers, most should probably at least be discussed with the client.",
-    "tags": [
-      "estimation",
-      "checklist"
-    ]
+    "tags": ["estimation", "checklist"]
   },
   {
     "slug": "frontend-checklist-for-websites",
     "title": "Frontend Checklist for Websites",
     "description": "Frontend Checklist for Websites",
-    "tags": [
-      "frontend",
-      "checklist"
-    ]
+    "tags": ["frontend", "checklist"]
   },
   {
     "slug": "frontend-checklist",
     "title": "Frontend Checklist",
     "description": "List of frontend checklist",
-    "tags": [
-      "frontend",
-      "checklist"
-    ]
+    "tags": ["frontend", "checklist"]
   },
   {
     "slug": "front-end-feature-building-checklist",
     "title": "Front End Feature Building Checklist",
     "description": "Front End Feature Building Checklist",
-    "tags": [
-      "frontend",
-      "checklist"
-    ]
+    "tags": ["frontend", "checklist"]
   },
   {
     "slug": "hiking-checklist",
     "title": "Hiking Checklist",
     "description": "A highly subjective list of the items you may need in a simple camping trip.",
-    "tags": [
-      "hiking",
-      "checklist"
-    ]
+    "tags": ["hiking", "checklist"]
   },
   {
     "slug": "holidays-vacations-cheat-sheet",
     "title": "Holidays-Vacations Cheat Sheet",
     "description": "Everything you will need to enjoy a trip away from home.",
-    "tags": [
-      "holidays",
-      "vacations"
-    ]
+    "tags": ["holidays", "vacations"]
   },
   {
     "slug": "inclusive-web-design-checklist",
     "title": "Inclusive Web Design Checklist",
     "description": "Aims to be the biggest checklist of inclusive design considerations for the web _ever_. Includes items for accessibility, performance, device support, interoperability, and language.",
-    "tags": [
-      "web design",
-      "checklist"
-    ]
+    "tags": ["web design", "checklist"]
   },
   {
     "slug": "the-less-obvious-conference-checklist",
     "title": "The Less Obvious Conference Checklist",
     "description": "This is a checklist for conference organisers of less obvious things. It’s easy to remember to book a venue, look for speakers and sell the tickets, but you could overlook many small things that can help your conference stand out. I mainly compiled this list from my own experience and from what I’ve seen other conferences do. So although I compiled the list, many recommendations are the result of hard work of others. See the AUTHORS file for a more extensive attribution.",
-    "tags": [
-      "conference",
-      "checklist"
-    ]
+    "tags": ["conference", "checklist"]
   },
   {
     "slug": "linux-commands-cheat-sheet",
     "title": "Linux Commands Cheat Sheet",
     "description": "List of linux commands",
-    "tags": [
-      "linux",
-      "linux command"
-    ]
+    "tags": ["linux", "linux command"]
   },
   {
     "slug": "meetup-checklist",
     "title": "Meetup checklist",
     "description": "Checklist to help me plan and added to it following the meetup.",
-    "tags": [
-      "meetup",
-      "checklist"
-    ]
+    "tags": ["meetup", "checklist"]
   },
   {
     "slug": "nginx",
     "title": "Nginx",
     "description": "Usefull nginx commands",
-    "tags": [
-      "nginx"
-    ]
+    "tags": ["nginx"]
   },
   {
     "slug": "personal-security-checklist",
     "title": "Personal Security Checklist",
     "description": "Take the following steps to secure your devices and accounts.",
-    "tags": [
-      "personal security",
-      "security",
-      "checklist"
-    ]
+    "tags": ["personal security", "security", "checklist"]
   },
   {
     "slug": "privacy-checklist",
     "title": "Privacy Checklist",
     "description": "This is a general list of stuff you can use to increase your privacy based on",
-    "tags": [
-      "privacy",
-      "security",
-      "checklist"
-    ]
+    "tags": ["privacy", "security", "checklist"]
   },
   {
     "slug": "online-security-and-privacy-for-the-paranoid",
     "title": "Online Security and Privacy for the Paranoid",
     "description": "A master checklist to secure your online life. ",
-    "tags": [
-      "privacy",
-      "security",
-      "checklist"
-    ]
+    "tags": ["privacy", "security", "checklist"]
   },
   {
     "slug": "seo-checklist",
     "title": "Seo Checklist",
     "description": "On-page SEO optimization list.",
-    "tags": [
-      "seo",
-      "checklist"
-    ]
+    "tags": ["seo", "checklist"]
   },
   {
     "slug": "ssh-cheat-sheet",
     "title": "SSH Cheat Sheet",
     "description": "List of shh commands",
-    "tags": [
-      "shh"
-    ]
+    "tags": ["shh"]
   },
   {
     "slug": "travel-checklist",
     "title": "Travel Checklist",
     "description": "Here are some helpful tips to make preparing for your journey easier.",
-    "tags": [
-      "travel",
-      "checklist"
-    ]
+    "tags": ["travel", "checklist"]
   }
 ]

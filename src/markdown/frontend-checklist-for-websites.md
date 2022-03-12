@@ -1,4 +1,3 @@
-
 # Frontend Checklist for Websites
 
 Frontend Checklist for Websites
@@ -140,6 +139,7 @@ Usually I measure the main pages of a project here.
 - [ ] Correct content types set by the server
 
 ### Resources
+
 - [checklist](https://github.com/drublic/checklist)
 
 <!--- Tags: [frontend, checklist] --->

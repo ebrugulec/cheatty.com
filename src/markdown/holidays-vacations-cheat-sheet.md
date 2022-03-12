@@ -91,6 +91,7 @@ Everything you will need to enjoy a trip away from home.
 - Swimming Goggles
 
 ### Resources
+
 - [Holidays / Vacations Cheat Sheet](https://cheatography.com/spaceduck/cheat-sheets/holidays-vacations/)
 
 <!--- Tags: [holidays, vacations] --->

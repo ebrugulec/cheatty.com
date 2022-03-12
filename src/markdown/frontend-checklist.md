@@ -3,6 +3,7 @@
 List of frontend checklist
 
 Some resources possess an emoticon to help you understand which type of content / help you may find on the checklist:
+
 - 📖: documentation or article
 - 🛠: online tool / testing tool
 - 📹: media or video content
@@ -24,7 +25,7 @@ Some resources possess an emoticon to help you understand which type of content 
 
 _The next 2 meta tags (Charset and Viewport) need to come first in the head._
 
-- [X] **Charset:** The charset (UTF-8) is declared correctly.
+- [x] **Charset:** The charset (UTF-8) is declared correctly.
 
 ```html
 <!-- Set character encoding for the document -->
@@ -653,6 +654,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > - 📖 [Sitemap guidelines - Google Support](https://support.google.com/webmasters/answer/183668?hl=en)
 
 ## Resources
+
 - [Front-End-Checklist](https://github.com/thedaviddias/Front-End-Checklist)
 
 <!--- Tags: [frontend, checklist] --->

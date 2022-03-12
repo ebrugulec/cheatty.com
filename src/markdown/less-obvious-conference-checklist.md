@@ -6,20 +6,21 @@ This is not a checklist of things you must do in order for your conference to be
 
 ### Contents
 
-* [Inclusivity](#inclusivity)
-* [Accessibility](#accessibility)
-* [Code of conduct](#code-of-conduct)
-* [Making attendees feel at home](#making-attendees-feel-at-home)
-* [Children](#children)
-* [Speakers](#speakers)
-* [Ticket sales](#ticket-sales)
-* [Team](#team)
-* [Recordings](#recordings)
-* [Other](#other)
+- [Inclusivity](#inclusivity)
+- [Accessibility](#accessibility)
+- [Code of conduct](#code-of-conduct)
+- [Making attendees feel at home](#making-attendees-feel-at-home)
+- [Children](#children)
+- [Speakers](#speakers)
+- [Ticket sales](#ticket-sales)
+- [Team](#team)
+- [Recordings](#recordings)
+- [Other](#other)
 
 ---
 
 ## Inclusivity
+
 - The importance of inclusivity is becoming well known in most communities. In general, remember that inclusivity is not exclusively about gender.
 - If you are running a financial aid program, I wrote a separate document about [some common issues I see](https://github.com/erikr/lessobviouschecklist/blob/master/FINANCIAL-AID.md).
 - For events involving alcohol, help people who do not drink feel welcome. Mention non-alcoholic drinks as often as alcoholic drinks, make them equally visible and have an equal number of options. People who don’t drink alcohol should never have to justify themselves. When you announce the event, mention that the Code of Conduct applies, people are responsible for their own alcohol use, and pushing others to drink is not acceptable. [This article](https://modelviewculture.com/pieces/alcohol-and-inclusivity-planning-tech-events-with-non-alcoholic-options) has many more great practical tips.
@@ -27,7 +28,7 @@ This is not a checklist of things you must do in order for your conference to be
 - Be mindful of how you identify the geographic region for the conference. DjangoCon Europe is notably not DjangoCon EU, because EU would mean we can’t have one in Switzerland. Communicate consistently on this.
 - Be very careful in how you describe your target group. If you use phrases like “advanced developers”, many people will not attend because they won’t feel advanced enough, or because they feel more like tech writers than developers. Also be mindful of terms like [technical and non-technical](http://anna-oz.tumblr.com/post/142527358160/people-are-people-contributions-are-contributions).
 - Make transgender people feel more at home with [posters stressing attendees shouldn’t judge who is using which bathroom](https://twitter.com/codingrixx/status/715558514631041025).
-- Look into making non-binary, and possibly some trans people, feel more at home with explicitly all gender bathrooms. Don’t replace all gendered bathrooms though. This may also be helpful for parents and for other trans people.  If your event uses multiple floors, you could mark bathrooms on some floors "all gender". Another option is to have separate wheelchair accessible bathrooms, which are generally gender-neutral already, by explicitly marking them as available to non-binary people too. Few events have such a high ratio of wheelchair users that this creates capacity issues.
+- Look into making non-binary, and possibly some trans people, feel more at home with explicitly all gender bathrooms. Don’t replace all gendered bathrooms though. This may also be helpful for parents and for other trans people. If your event uses multiple floors, you could mark bathrooms on some floors "all gender". Another option is to have separate wheelchair accessible bathrooms, which are generally gender-neutral already, by explicitly marking them as available to non-binary people too. Few events have such a high ratio of wheelchair users that this creates capacity issues.
 - Whenever you ask for people’s names, don’t ask for a first and last name. Not everyone has a clear first and last name, and there is little reason to want to separate them. When you ask for names, ask how they would like to be called in a single field. If needed, add a separate field for their legal name. You’ll probably need the latter if you are making hotel reservations for people, for example.
 - Some people, especially those new to attending events, may be uncertain about the dress code. It’s worth specifying this explicitly, even if your entire dress code is “wear whatever you’re comfortable with, as long as it does not violate the code of conduct”. [PyCon UK 2016](http://2016.pyconuk.org/diversity-accessibility-inclusion/) does this very well.
 - Some ways to improve inclusivity may seem odd or useless to you as organisers. However, they can often make a big difference for other attendees in different positions and from different backgrounds, at little cost to you.
@@ -35,6 +36,7 @@ This is not a checklist of things you must do in order for your conference to be
 - For an excellent wider overview of steps to take around inclusivity, see [“Help! someone has pointed out my conference has diversity issues! How do I fix this?”](https://medium.com/samsung-internet-dev/help-someone-has-pointed-out-my-conference-has-diversity-issues-c1162a1e8d4c) by Ada Rose Cannon.
 
 ## Accessibility
+
 - Write an accessibility statement. I wrote one for [Django Under the Hood](http://www.djangounderthehood.com/accessibility/). In this statement, you inform people with physical, visual or auditory impairments what you can offer them. This doesn’t mean your conference must be accessible, and if it’s unavoidable it’s ok to say you don’t know. Its most important role is that you inform people what you are planning to do, what you do and don’t know, and that you’re happy to listen to anyone’s questions in this area.
 - Provide the simplest way of access for inquiries - an email address. Forms and too many detailed questions might be inaccessible and/or put people off.
 - For people with physical impairments, be specific about the actual situation. Some people that use wheelchairs can actually cross a few steps if needed. Some require specific accessible toilets, others do not. A generic term like “wheelchair accessible” leaves many questions for these people.
@@ -48,6 +50,7 @@ This is not a checklist of things you must do in order for your conference to be
 - A good way to test your signage is to bring someone who has never seen the venue before - as an organiser you'll know it well. Get them to start at the railway station or bus stop and navigate to the checkin desk. Repeat from the carpark. Repeat to get to speaking halls. Place a sign in places where that it's not obvious where to go. As well as signs for checkin and speaking halls, consider signs for food, restrooms, and bus pickup points for off-venue events.
 
 ## Code of conduct
+
 - Have a code of conduct / inclusivity policy. There are [plenty](http://www.djangounderthehood.com/coc/) of [examples](https://2018.djangocon.eu/conduct/) for this. Most of them can be summarised as “don’t be an asshole, and be considerate for how your actions may be perceived by others” but for numerous reasons that have been discussed at length elsewhere, it is important to include more detail.
 - Ensure the CoC is known to everyone. This ensures nobody can say “I didn’t know” and also stresses to your attendees how important it is to you. Make people confirm knowing the CoC when they buy a ticket, or submit the call for papers. Have posters around the venue with a short version and mention it in your introduction talks every day.
 - Parties are notorious for CoC violations, often related to alcohol. Stress in your announcements by mail, twitter or in person, that the CoC applies to the party too. When you make your event more accessible to people that don’t drink alcohol, as listed above, you are also making it easier for other attendees to drink moderately and responsibly. People are more inclined to keep drinking more if everyone around them is still drinking alcohol too.
@@ -55,7 +58,7 @@ This is not a checklist of things you must do in order for your conference to be
 - Make sure the members of the CARE team are known and listed by name on the website.
 - Have special phone numbers available for reporting CoC issues, especially for emergencies. Often people buy prepaid sim cards in the country of the conference, and put these in cheap dumb phones. One or two members of the CARE team carry these the entire conference. The numbers are on posters, the conference booklet and the website, and their availability is mentioned in the opening notes.
 - The primary reporting mechanism is probably still email, so have a conduct@yourconference.com available and communicated that goes to the CARE team. Don't ask people to report to a wider group than the CARE team.
-- If you have a Slack or twitter hashtag, don’t forget to monitor those for CoC issues. Consider also using [highlight words](https://get.slack.help/hc/en-us/articles/201398467-Highlight-word-notifications) to notify your CARE team when an abusive term is used, or when someone starts a conversation about harassment or the Code of Conduct. (Remember to include common misspellings.) 
+- If you have a Slack or twitter hashtag, don’t forget to monitor those for CoC issues. Consider also using [highlight words](https://get.slack.help/hc/en-us/articles/201398467-Highlight-word-notifications) to notify your CARE team when an abusive term is used, or when someone starts a conversation about harassment or the Code of Conduct. (Remember to include common misspellings.)
 - You or your community may be hesitant to adopt a CoC, for example because it feels to some as a tool of censorship. Issues where someone’s behaviour is so unacceptable that they are removed from the conference, or even the community, do occur, and it's essential that you are able to handle them. However, many issues are much less serious, and more due to someone being unaware than of ill will. They still require careful handling, but that could also be a serious conversation of “you did this, this isn’t cool, don’t do it again, have a nice conference”.
 - To build further support of a CoC, publish a transparency report afterwards. We first [published one for DUTH 2015](http://blog.djangounderthehood.com/post/132867126995/coc-transparency-report). Ensure nobody in there is identifiable.
 - You can consider screening the presenters’ slides in advance for CoC violations. This is some effort in advance, especially because not all speakers will be able to send you their slides early. A draft version might also suffice. The point is that you can catch at least some possible CoC violations before they’re shown in the large screen in front of all your attendees. You can also use this to check for readability issues like contrast (especially considering color vision efficiency) or size.
@@ -101,7 +104,7 @@ This is not a checklist of things you must do in order for your conference to be
 - Some people strongly prefer to share a hotel room with someone, others strongly prefer a private room. If you arrange hotel rooms for your speakers, you can always ask whether anyone would like to share. This works particularly well when many speakers know each other already. Sharing rooms reduces your costs. Do ensure that you always keep the option open for people to have a private room, without extra cost, for those that need the personal space or need a private room for other reasons.
 - Consider the diversity of your speakers, particularly your keynote speakers, and the message that sends to (potential) conference attendees. If all your keynotes are being given (or appear to be being given) by the dominant demographic in your community, that can make your conference and community look like it excludes others, even if you did not intend that. Speaker lineups are one of the first things many people look at to see how much a conference values inclusivity.
 - Before you introduce a speaker, make sure to ask what name they prefer, how to pronounce it, and what pronouns they use – even if it seems obvious. It‘s jarring for the speaker if you get this wrong just before they go on stage.
-- *Train* the people doing introductions. Often they are volunteers who aren't used to public speaking. They should be clear, loud enough to hear, say something about the speaker, and invite a round of applause. Train them in microphone use too. A good introduction should make the speaker and the audience feel positive and ready to go. linux.conf.au has taken to asking specifically for people willing to do introductions as a separate role from conference volunteers in general, which does help to achieve good, positive introductions.
+- _Train_ the people doing introductions. Often they are volunteers who aren't used to public speaking. They should be clear, loud enough to hear, say something about the speaker, and invite a round of applause. Train them in microphone use too. A good introduction should make the speaker and the audience feel positive and ready to go. linux.conf.au has taken to asking specifically for people willing to do introductions as a separate role from conference volunteers in general, which does help to achieve good, positive introductions.
 - Q&A at the end of a talk is notorious for attracting questions meant to embarras the speaker, or make long statements - although sometimes it goes well. However, it is still often questionable how useful the Q&A part was for all the other attendees that sat and watched. You could decide not to do a Q&A and just tell people to come to the speaker. However, if you do Q&A, at least make sure to cut people off that say "this isn't really a question but more of a comment" or who seem to be just making comments.
 
 ## Tickets
@@ -142,8 +145,8 @@ This is not a checklist of things you must do in order for your conference to be
 - Always make a bunch extra blank badges and posters, so that you can make some on the spot if needed, for example because you misprinted something.
 - Don’t forget to have fun :)
 
-
 ### Resources
+
 - [lessobviouschecklist](https://github.com/mxsasha/lessobviouschecklist)
 
 <!--- Tags: [conference, checklist] --->

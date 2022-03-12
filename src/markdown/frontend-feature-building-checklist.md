@@ -38,6 +38,7 @@ Front End Feature Building Checklist
 - [ ] 🎉 Celebrate and watch what kind of impact/usage the feature going to bring.
 
 ## Resources
+
 - [front-end-building-checklist](https://github.com/soleo/front-end-building-checklist/blob/master/README.md)
 
 <!--- Tags: [frontend, checklist] --->

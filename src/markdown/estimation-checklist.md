@@ -12,7 +12,7 @@ This is not an estimation methedology or a replacement for good practices. it is
   - [ ] Which actions need approvals? How should approvals work?
   - [ ] Can any actions be un-done by the user?
   - [ ] Can users save drafts of updates? How does this interact with approvals, deletions & access?
-- [ ] What are system/browser requirements? 
+- [ ] What are system/browser requirements?
   - [ ] Can there be different ones for users in different roles? (eg admins will always use chrome latest)
   - [ ] What are the expectations for offline functionality?
 - [ ] How will authentication work?
@@ -22,8 +22,8 @@ This is not an estimation methedology or a replacement for good practices. it is
     - [ ] Who sends invites? Where is the UI for this?
   - [ ] Is Oauth integration necessary? (eg Facebook or Google) Mandatory? (This can be great as then you don't have to store account info at all)
   - [ ] How will [forgotten usernames/passwords be handled?](http://www.troyhunt.com/2012/05/everything-you-ever-wanted-to-know.html)?
-- [ ] What are the different usage roles within the system? (eg super-admin, manager, registered user, guest) 
-  - [ ] How are authorization permissions assigned and managed? 
+- [ ] What are the different usage roles within the system? (eg super-admin, manager, registered user, guest)
+  - [ ] How are authorization permissions assigned and managed?
     - Which users should have access to which functionality?
     - Which users should have access to which data? (eg. a sales rep can't access notes on leads of other sales reps)
   - [ ] Which portions of the application are publically accessible?
@@ -63,7 +63,7 @@ This is not an estimation methedology or a replacement for good practices. it is
   - [ ] How fancy do UI controls need to be? (eg can you just use built-in HTML5 browser validation)
 - [ ] What are expectations for timelines?
   - [ ] When would you like MVP to launch?
-  - [ ] Are there constraints by which MVP *must* launch? (eg the old system becomes deprecated in August)
+  - [ ] Are there constraints by which MVP _must_ launch? (eg the old system becomes deprecated in August)
   - [ ] When would you like there to be be a Beta launch? What should go into it over MVP?
   - [ ] When would you like the application to go public?
 - [ ] Are users uploading files?
@@ -77,6 +77,7 @@ This is not an estimation methedology or a replacement for good practices. it is
   - [ ] What happens if a moderator is abusive?
 
 ### Resources
+
 - [estimation-checklist](https://github.com/togakangaroo/estimation-checklist)
 
 <!--- Tags: [estimation, checklist] --->
