@@ -8,7 +8,7 @@
   {
     "slug": "code-review-checklist-for-frontend-developers",
     "title": "Code Review Checklist for FrontEnd Developers",
-    "description": "The goal is not to define a formal definition of practices for code review but to give some checklist for reviewers. ",
+    "description": "The goal is not to define a formal definition of practices for code review but to give some checklist for reviewers.",
     "tags": ["frontend", "code review", "checklist"]
   },
   {
@@ -104,7 +104,7 @@
   {
     "slug": "online-security-and-privacy-for-the-paranoid",
     "title": "Online Security and Privacy for the Paranoid",
-    "description": "A master checklist to secure your online life. ",
+    "description": "A master checklist to secure your online life.",
     "tags": ["privacy", "security", "checklist"]
   },
   {

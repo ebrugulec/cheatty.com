@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write .",
+    "format": "prettier --write ./src/**/*.{json,ts,tsx,scss}",
     "parse-markdowns": "node scripts/parse_markdowns.js",
     "pick-tags": "node scripts/pick_tags.js",
     "parse": "yarn parse-markdowns && yarn pick-tags",
