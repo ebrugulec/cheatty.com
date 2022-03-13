@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 export type DarkModeState = "dark" | "light";
 export type SetDarkModeState = React.Dispatch<
@@ -6,23 +6,29 @@ export type SetDarkModeState = React.Dispatch<
 >;
 
 function useDarkMode() {
-  const [theme, setTheme] = useState<DarkModeState>(
-    typeof window !== "undefined" ? localStorage.theme : "dark"
-  );
-  const colorTheme = theme === "dark" ? "light" : "dark";
+  const isClient = typeof window !== "undefined";
+  const currentTheme = isClient ? localStorage.theme : "dark";
+
+  const [theme, setTheme] = useState<DarkModeState>(currentTheme);
+
+  const getNewTheme = (oldTheme: DarkModeState) => {
+    return oldTheme === "dark" ? "light" : "dark";
+  };
+
+  const toggleTheme = () => {
+    const newTheme = getNewTheme(theme);
+    localStorage.setItem("theme", newTheme);
+    setTheme(newTheme);
+  };
 
   useEffect(() => {
-    const root = window.document.documentElement;
+    const root = window.document.body;
 
-    root.classList.remove(colorTheme);
-    root.classList.add(theme);
-
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", theme);
-    }
+    root.classList.remove(theme);
+    root.classList.add(getNewTheme(theme));
   }, [theme]);
 
-  return [colorTheme, setTheme] as const;
+  return [theme, toggleTheme] as const;
 }
 
 export default useDarkMode;
