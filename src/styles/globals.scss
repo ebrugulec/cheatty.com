@@ -6,6 +6,25 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+:root {
+  --txt-1: #000000;
+
+  --bg-1: #ffffff;
+  --bg-2: #eeeeee;
+}
+
+:root .dark {
+  --txt-1: #ffffff;
+
+  --bg-1: #282c34;
+  --bg-2: #121212;
+}
+
+body {
+  color: var(--txt-1);
+  background-color: var(--bg-1);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -21,8 +40,4 @@ a {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-}
-
-.dark {
-  background: #282c34;
 }

@@ -2,15 +2,11 @@ import Link from "next/link";
 import Icon from "../Icon";
 
 import styles from "./Header.module.scss";
-import { DarkModeState, SetDarkModeState } from "hooks/UseDarkMode";
+import useDarkMode from "hooks/UseDarkMode";
 
-const Header = ({
-  theme,
-  setTheme,
-}: {
-  theme: DarkModeState;
-  setTheme: SetDarkModeState;
-}) => {
+const Header = () => {
+  const [theme, toggleTheme] = useDarkMode();
+
   return (
     <header data-testid="header" className={styles.header}>
       <Link href="/">
@@ -25,21 +21,11 @@ const Header = ({
         </a>
       </Link>
       <div>Awesome Cheat Sheets</div>
-      {theme === "light" ? (
-        <Icon
-          icon="sun"
-          size={25}
-          color="black"
-          onClick={() => setTheme("light")}
-        />
-      ) : (
-        <Icon
-          icon="moon-fill"
-          size={18}
-          color="black"
-          onClick={() => setTheme("dark")}
-        />
-      )}
+      <Icon
+        icon={theme === "light" ? "moon" : "sun"}
+        size={18}
+        onClick={toggleTheme}
+      />
     </header>
   );
 };
