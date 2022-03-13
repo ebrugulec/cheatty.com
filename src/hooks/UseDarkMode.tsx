@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export type DarkModeState = "dark" | "light";
 export type SetDarkModeState = React.Dispatch<
