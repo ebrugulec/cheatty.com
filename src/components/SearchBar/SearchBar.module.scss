@@ -1,17 +1,12 @@
-.searchWrapper {
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #eee;
-
-  .searchBar {
-    width: 500px;
-    max-width: 90%;
-    height: 40px;
-    padding: 12px;
-    border-radius: 12px;
-    margin: 10px auto;
-    border: 1px solid #ccc;
-  }
+.searchBar {
+  width: 150px;
+  max-width: 90%;
+  height: 30px;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 10px auto;
+  border: 0;
+  outline: none;
+  background-color: var(--bg-2);
+  color: var(--txt-1);
 }
