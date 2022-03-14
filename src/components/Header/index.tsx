@@ -9,23 +9,19 @@ const Header = () => {
 
   return (
     <header data-testid="header" className={styles.header}>
-      <Link href="/">
-        <a>
-          <img
-            className="logo"
-            width={100}
-            height={75}
-            src="/logo.svg"
-            alt="HeaderLogo"
-          />
-        </a>
-      </Link>
-      <div>Awesome Cheat Sheets</div>
-      <Icon
-        icon={theme === "light" ? "moon" : "sun"}
-        size={18}
-        onClick={toggleTheme}
-      />
+      <div className={styles.headerBrand}>
+        <Link href="/">
+          <a>Awesome Cheat Sheets</a>
+        </Link>
+      </div>
+      <div className={styles.headerAction}>
+        <div id="searchWrapper" />
+        <Icon
+          icon={theme === "light" ? "moon" : "sun"}
+          size={18}
+          onClick={toggleTheme}
+        />
+      </div>
     </header>
   );
 };

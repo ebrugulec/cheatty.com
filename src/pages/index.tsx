@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
 import Markdown, { MarkdownProps } from "@components/MarkdownPreview";
 import SearchBar from "@components/SearchBar";
@@ -10,12 +11,14 @@ import tags from "@data/tags.json";
 import allMarkdowns from "@data/markdowns.json";
 
 import styles from "./Home.module.scss";
+import { useEffect } from "react";
 
 const SLICE_TAG_COUNT = 15;
 
 const Home: NextPage = () => {
   const [searchValue, setSearchValue] = useState("");
   const [markdowns, setMarkdowns] = useState(allMarkdowns);
+  const [mount, setMount] = useState(false);
 
   const sortedTags = sortTags(tags).slice(0, SLICE_TAG_COUNT);
 
@@ -49,9 +52,18 @@ const Home: NextPage = () => {
     }
   };
 
+  useEffect(() => {
+    setMount(true);
+  }, []);
+
   return (
     <div className={styles.homepage}>
-      <SearchBar value={searchValue} onSearchHandle={searchMarkdowns} />
+      {mount &&
+        ReactDOM.createPortal(
+          <SearchBar value={searchValue} onSearchHandle={searchMarkdowns} />,
+          document.querySelector("#searchWrapper")
+        )}
+
       <div className={styles.tagList}>
         {sortedTags.map((tag: TagProps) => (
           <Tag key={tag.name} name={tag.name} />
