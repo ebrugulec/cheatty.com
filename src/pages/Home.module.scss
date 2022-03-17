@@ -4,7 +4,9 @@
   .markdownList {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 40px;
+    margin: 40px;
+    align-items: center;
+    justify-content: center;
     color: var(--txt-1);
   }
 
