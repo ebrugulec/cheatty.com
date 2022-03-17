@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from "next";
 
-import MarkdownPreview, { MarkdownProps } from "@components/MarkdownPreview";
+import Card, { MarkdownProps } from "@components/Card";
 
 import styles from "./Tag.module.scss";
 
@@ -9,7 +9,7 @@ const TagDetail = ({ markdowns }: { markdowns: MarkdownProps[] }) => {
     <div className={styles.tagPage}>
       <div className={styles.markdownList}>
         {markdowns.map((markdown) => (
-          <MarkdownPreview key={markdown.slug} {...markdown} />
+          <Card key={markdown.slug} {...markdown} />
         ))}
       </div>
     </div>
