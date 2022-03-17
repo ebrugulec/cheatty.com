@@ -8,16 +8,24 @@ body {
 
 :root {
   --txt-1: #000000;
+  --txt-1: #000000;
 
   --bg-1: #ffffff;
   --bg-2: #eeeeee;
+  --bg-3: #f1f1f1;
+  --bg-4: #45409a;
+
+  --white: #ffffff;
 }
 
 :root .dark {
   --txt-1: #ffffff;
+  --txt-2: #d2d2d2;
 
-  --bg-1: #282c34;
-  --bg-2: #121212;
+  --bg-1: #212122;
+  --bg-2: #2f2f2f;
+  --bg-3: #161515;
+  --bg-4: #45409a;
 }
 
 body {
