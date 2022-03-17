@@ -9,4 +9,9 @@
   outline: none;
   background-color: var(--bg-2);
   color: var(--txt-1);
+  transition: 0.3s;
+
+  &:focus {
+    width: 200px;
+  }
 }

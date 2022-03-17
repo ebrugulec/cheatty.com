@@ -11,7 +11,7 @@ const Header = () => {
     <header data-testid="header" className={styles.header}>
       <div className={styles.headerBrand}>
         <Link href="/">
-          <a>Awesome Cheat Sheets</a>
+          <a>LOGO</a>
         </Link>
       </div>
       <div className={styles.headerAction}>
