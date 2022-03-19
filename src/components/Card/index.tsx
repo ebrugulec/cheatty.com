@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Tag from "@components/Tag";
+import Tags from "@components/Tags";
 
 import styles from "./Card.module.scss";
 
@@ -28,11 +28,7 @@ const Card = ({ title, slug, description, tags }: MarkdownProps) => {
             <h3>{title}</h3>
             <p>{shortenerDesc}</p>
           </div>
-          <div className={styles.tags}>
-            {tags.map((tag) => (
-              <Tag key={tag} name={tag} />
-            ))}
-          </div>
+          <Tags tags={tags} />
         </div>
       </a>
     </Link>

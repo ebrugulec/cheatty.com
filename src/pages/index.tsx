@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 import Card, { MarkdownProps } from "@components/Card";
+import Tags from "@components/Tags";
 import SearchBar from "@components/SearchBar";
-import Tag, { TagProps } from "@components/Tag";
 import { sortTags } from "@utils/common";
 
 import tags from "@data/tags.json";
@@ -20,7 +20,9 @@ const Home: NextPage = () => {
   const [markdowns, setMarkdowns] = useState(allMarkdowns);
   const [mount, setMount] = useState(false);
 
-  const sortedTags = sortTags(tags).slice(0, SLICE_TAG_COUNT);
+  const sortedTags = sortTags(tags)
+    .slice(0, SLICE_TAG_COUNT)
+    .map(({ name }) => name);
 
   const searchMarkdowns = (value: string) => {
     setSearchValue(value);
@@ -75,9 +77,7 @@ const Home: NextPage = () => {
         ))}
       </div>
       <div className={styles.tagList}>
-        {sortedTags.map((tag: TagProps) => (
-          <Tag key={tag.name} name={tag.name} />
-        ))}
+        <Tags tags={sortedTags} />
       </div>
     </div>
   );
