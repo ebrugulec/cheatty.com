@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import Markdown, { MarkdownProps } from "@components/MarkdownPreview";
+import Card, { MarkdownProps } from "@components/Card";
 import SearchBar from "@components/SearchBar";
 import Tag, { TagProps } from "@components/Tag";
 import { sortTags } from "@utils/common";
@@ -61,23 +61,22 @@ const Home: NextPage = () => {
       {mount &&
         ReactDOM.createPortal(
           <SearchBar value={searchValue} onSearchHandle={searchMarkdowns} />,
-          document.querySelector("#searchWrapper")
+          document.querySelector("#searchWrapper")!
         )}
-
-      <div className={styles.tagList}>
-        {sortedTags.map((tag: TagProps) => (
-          <Tag key={tag.name} name={tag.name} />
-        ))}
-      </div>
       <div className={styles.markdownList}>
         {markdowns.map((markdown: MarkdownProps) => (
-          <Markdown
+          <Card
             key={markdown.slug}
             title={markdown.title}
             slug={markdown.slug}
             description={markdown.description}
             tags={markdown.tags}
           />
+        ))}
+      </div>
+      <div className={styles.tagList}>
+        {sortedTags.map((tag: TagProps) => (
+          <Tag key={tag.name} name={tag.name} />
         ))}
       </div>
     </div>

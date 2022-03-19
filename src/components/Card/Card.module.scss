@@ -1,0 +1,33 @@
+.cheatsheetCard {
+  width: 300px;
+  min-height: 150px;
+  margin: 10px;
+  height: 250px;
+  padding: 20px;
+  background-color: var(--bg-3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  opacity: 1;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  p {
+    color: var(--txt-2);
+    font-size: 14px;
+  }
+
+  .tags {
+    display: flex;
+  }
+}

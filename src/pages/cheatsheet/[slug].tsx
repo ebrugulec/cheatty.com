@@ -2,7 +2,7 @@ import type { GetServerSideProps } from "next";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-import { MarkdownPropsWithContent } from "@components/MarkdownPreview";
+import { MarkdownPropsWithContent } from "@components/Card";
 
 import styles from "./Cheatsheet.module.scss";
 

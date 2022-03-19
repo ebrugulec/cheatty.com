@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Tag from "@components/Tag";
 
-import styles from "./MarkdownPreview.module.scss";
+import styles from "./Card.module.scss";
 
 export interface MarkdownProps {
   slug: string;
@@ -16,13 +16,18 @@ export interface MarkdownPropsWithContent extends MarkdownProps {
   error?: string;
 }
 
-const MarkdownPreview = ({ title, slug, description, tags }: MarkdownProps) => {
+const Card = ({ title, slug, description, tags }: MarkdownProps) => {
+  const shortenerDesc =
+    description.length > 150 ? description.slice(0, 150) + "..." : description;
+
   return (
     <Link href={`/cheatsheet/${slug}`}>
       <a>
         <div className={styles.cheatsheetCard}>
-          <h4>{title}</h4>
-          <p>{description}</p>
+          <div>
+            <h3>{title}</h3>
+            <p>{shortenerDesc}</p>
+          </div>
           <div className={styles.tags}>
             {tags.map((tag) => (
               <Tag key={tag} name={tag} />
@@ -34,4 +39,4 @@ const MarkdownPreview = ({ title, slug, description, tags }: MarkdownProps) => {
   );
 };
 
-export default MarkdownPreview;
+export default Card;

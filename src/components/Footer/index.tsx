@@ -11,7 +11,7 @@ const Footer = () => (
         rel="noreferrer"
         aria-label="GitHub"
       >
-        <Icon icon="github" size={20} color="black" />
+        <Icon icon="github" size={20} />
       </a>
     </div>
     <div className={styles.content}>Awesome Cheat Sheets</div>
