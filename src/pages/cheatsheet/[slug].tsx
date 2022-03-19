@@ -1,4 +1,5 @@
 import type { GetServerSideProps } from "next";
+import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -9,6 +10,8 @@ import Tags from "@components/Tags";
 import styles from "./Cheatsheet.module.scss";
 
 const CheatsheetDetail = ({
+  title,
+  description,
   tags,
   content,
   error,
@@ -19,6 +22,10 @@ const CheatsheetDetail = ({
         <div>{error}</div>
       ) : (
         <>
+          <Head>
+            <title>{title}</title>
+            <meta name="description" content={description} />
+          </Head>
           <Tags tags={tags} />
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}

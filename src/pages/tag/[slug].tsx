@@ -1,12 +1,21 @@
 import type { GetServerSideProps } from "next";
+import Head from "next/head";
 
 import Card, { MarkdownProps } from "@components/Card";
 
 import styles from "./Tag.module.scss";
 
-const TagDetail = ({ markdowns }: { markdowns: MarkdownProps[] }) => {
+interface TagDetailPageProps {
+  markdowns: MarkdownProps[];
+  tag: string;
+}
+
+const TagDetail = ({ tag, markdowns }: TagDetailPageProps) => {
   return (
     <div className={styles.tagPage}>
+      <Head>
+        <title>Tag - {tag}</title>
+      </Head>
       <div className={styles.markdownList}>
         {markdowns.map((markdown) => (
           <Card key={markdown.slug} {...markdown} />
@@ -28,6 +37,6 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   }
 
   return {
-    props: { markdowns },
+    props: { tag: slug, markdowns },
   };
 };
