@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
@@ -60,6 +61,9 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.homepage}>
+      <Head>
+        <title>Dev Cheat Sheet</title>
+      </Head>
       {mount &&
         ReactDOM.createPortal(
           <SearchBar value={searchValue} onSearchHandle={searchMarkdowns} />,
