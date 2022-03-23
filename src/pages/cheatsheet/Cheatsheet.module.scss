@@ -3,4 +3,15 @@
   width: 900px;
   max-width: 90%;
   margin: 30px auto;
+
+  li {
+    line-height: 30px;
+  }
+
+  a {
+    color: #9791f5 !important;
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: 1px dotted #9791f5;
+  }
 }
