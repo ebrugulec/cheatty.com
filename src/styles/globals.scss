@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
   --txt-1: #000000;
-  --txt-1: #000000;
+  --txt-2: #000000;
+  --txt-3: #45409a;
 
   --bg-1: #ffffff;
   --bg-2: #eeeeee;
@@ -20,11 +22,12 @@ body {
 
 :root .dark {
   --txt-1: #ffffff;
-  --txt-2: #d2d2d2;
+  --txt-2: #999999;
+  --txt-3: #9791f5;
 
   --bg-1: #212122;
   --bg-2: #2f2f2f;
-  --bg-3: #161515;
+  --bg-3: #1f1f1f;
   --bg-4: #45409a;
 }
 
