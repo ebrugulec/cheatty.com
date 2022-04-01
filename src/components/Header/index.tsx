@@ -17,6 +17,7 @@ const Header = () => {
       <div className={styles.headerAction}>
         <div id="searchWrapper" />
         <Icon
+          className={styles.headerThemeSwitch}
           icon={theme === "light" ? "moon" : "sun"}
           size={18}
           onClick={toggleTheme}
