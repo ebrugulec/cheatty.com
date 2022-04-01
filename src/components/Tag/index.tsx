@@ -8,11 +8,9 @@ export interface TagProps {
 
 const Tag = ({ name }: { name: string }) => (
   <Link href={`/tag/${name}`}>
-    <a>
-      <div data-testid="tag-name" className={styles.tag}>
-        {name}
-      </div>
-    </a>
+    <div data-testid="tag-name" className={styles.tag}>
+      {name}
+    </div>
   </Link>
 );
 
