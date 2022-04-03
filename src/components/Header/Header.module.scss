@@ -16,9 +16,11 @@
     align-items: center;
     height: 60px;
     font-weight: bold;
+    color: var(--txt-1);
 
-    a {
-      color: var(--txt-1);
+    svg {
+      margin-right: 5px;
+      color: var(--txt-3);
     }
   }
 
