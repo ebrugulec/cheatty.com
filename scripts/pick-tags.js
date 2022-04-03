@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const slugify = require("slugify");
+
 const markdowns = require("../src/data/markdowns.json");
 
 const tags = [];
@@ -11,7 +13,8 @@ markdowns?.forEach((markdown) => {
     if (tagIndex >= 0) {
       tags[tagIndex].count = tags[tagIndex].count + 1;
     } else {
-      tags.push({ name: markdownTag, count: 1 });
+      const slug = slugify(markdownTag, { lower: true });
+      tags.push({ name: markdownTag, slug, count: 1 });
     }
   });
 });

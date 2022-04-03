@@ -1,86 +1,107 @@
 [
   {
     "name": "api",
+    "slug": "api",
     "count": 1
   },
   {
     "name": "security",
+    "slug": "security",
     "count": 4
   },
   {
     "name": "checklist",
+    "slug": "checklist",
     "count": 17
   },
   {
     "name": "frontend",
+    "slug": "frontend",
     "count": 4
   },
   {
     "name": "code review",
+    "slug": "code-review",
     "count": 1
   },
   {
     "name": "congress",
+    "slug": "congress",
     "count": 1
   },
   {
     "name": "estimation",
+    "slug": "estimation",
     "count": 1
   },
   {
     "name": "hiking",
+    "slug": "hiking",
     "count": 1
   },
   {
     "name": "holidays",
+    "slug": "holidays",
     "count": 1
   },
   {
     "name": "vacations",
+    "slug": "vacations",
     "count": 1
   },
   {
     "name": "web design",
+    "slug": "web-design",
     "count": 1
   },
   {
     "name": "conference",
+    "slug": "conference",
     "count": 1
   },
   {
     "name": "linux",
+    "slug": "linux",
     "count": 1
   },
   {
     "name": "linux command",
+    "slug": "linux-command",
     "count": 1
   },
   {
     "name": "meetup",
+    "slug": "meetup",
     "count": 1
   },
   {
     "name": "nginx",
+    "slug": "nginx",
     "count": 1
   },
   {
     "name": "personal security",
+    "slug": "personal-security",
     "count": 1
   },
   {
     "name": "privacy",
+    "slug": "privacy",
     "count": 2
   },
   {
     "name": "seo",
+    "slug": "seo",
     "count": 1
   },
   {
     "name": "shh",
+    "slug": "shh",
     "count": 1
   },
   {
     "name": "travel",
+    "slug": "travel",
     "count": 1
   }
 ]
