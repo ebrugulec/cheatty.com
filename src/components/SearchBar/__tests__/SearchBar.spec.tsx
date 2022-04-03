@@ -5,7 +5,7 @@ import SearchBar from "..";
 
 describe("SearchBar", () => {
   it("should render SearchBar corretly", () => {
-    render(<SearchBar value={"Val"} onSearchHandle={() => {}} />);
+    render(<SearchBar value={"Val"} onSearchHandle={() => null} />);
     const searchBar = screen.getByTestId("search-bar");
 
     expect(searchBar).toBeInTheDocument();

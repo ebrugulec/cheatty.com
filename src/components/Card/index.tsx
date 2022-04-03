@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { TagProps } from "@components/Tag";
 import Tags from "@components/Tags";
 
 import styles from "./Card.module.scss";
@@ -8,7 +9,7 @@ export interface MarkdownProps {
   slug: string;
   title: string;
   description: string;
-  tags: string[];
+  tags: TagProps[];
 }
 
 export interface MarkdownPropsWithContent extends MarkdownProps {

@@ -11,7 +11,7 @@ glob(path.join(__dirname, "../src/markdowns/*.md"), function (err, files) {
   files.forEach((file) => {
     const fileContent = fs.readFileSync(file, { encoding: "utf-8" });
 
-    const [titleLine, description] = fileContent.split("\n").filter((i) => i);
+    const [titleLine, description] = fileContent.split("\n").filter(Boolean);
     const [, title] = titleLine.match(/#\s([A-Za-z0-9- ]+)/);
     const slug = slugify(title, { lower: true });
     const tagsResult = fileContent.match(/<!--- Tags: \[([a-z0-9, ]+)\] --->/);
@@ -21,8 +21,13 @@ glob(path.join(__dirname, "../src/markdowns/*.md"), function (err, files) {
     if (tagsResult) {
       tags = tagsResult[1]
         .split(",")
-        .map((i) => i.trim())
-        .filter((i) => i);
+        .map((tag) => tag.trim())
+        .filter(Boolean)
+        .map((tag) => ({
+          name: tag,
+          slug: slugify(tag, { lower: true }),
+          count: 1,
+        }));
     }
 
     const content = fileContent.replace(`${tagsResult[0]}\n`, "");

@@ -21,9 +21,7 @@ const Home: NextPage = () => {
   const [markdowns, setMarkdowns] = useState(allMarkdowns);
   const [mount, setMount] = useState(false);
 
-  const sortedTags = sortTags(tags)
-    .slice(0, SLICE_TAG_COUNT)
-    .map(({ name }) => name);
+  const sortedTags = sortTags(tags).slice(0, SLICE_TAG_COUNT);
 
   const searchMarkdowns = (value: string) => {
     setSearchValue(value);
@@ -35,7 +33,7 @@ const Home: NextPage = () => {
       const filteredMarkdownsWithTitle: MarkdownProps[] = [];
       const filteredMarkdownsWithDescription: MarkdownProps[] = [];
 
-      allMarkdowns.map((markdown) => {
+      allMarkdowns.forEach((markdown) => {
         const title = markdown.title.toLowerCase();
         const description = markdown.description.toLowerCase();
 
