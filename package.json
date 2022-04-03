@@ -9,7 +9,8 @@
     "format": "prettier --write ./src/**/*.{json,ts,tsx,scss}",
     "parse-markdowns": "node scripts/parse-markdowns.js",
     "pick-tags": "node scripts/pick-tags.js",
-    "parse": "yarn parse-markdowns && yarn pick-tags",
+    "create-sitemap": "node scripts/create-sitemap.js",
+    "parse": "yarn parse-markdowns && yarn pick-tags && yarn create-sitemap",
     "test": "jest",
     "prepare": "husky install"
   },
@@ -28,6 +29,7 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@types/node": "17.0.13",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "17.0.38",
     "@types/react-dom": "^17.0.13",
     "@types/react-syntax-highlighter": "^13.5.2",
