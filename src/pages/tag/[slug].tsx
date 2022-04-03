@@ -33,7 +33,9 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { slug } = query;
 
   if (typeof slug === "string") {
-    markdowns = markdowns.filter(({ tags }) => tags.includes(slug));
+    markdowns = markdowns.filter(({ tags }) =>
+      tags.find(({ slug: markDownSlug }) => markDownSlug === slug)
+    );
   }
 
   return {

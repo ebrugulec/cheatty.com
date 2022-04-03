@@ -2,6 +2,17 @@
   "slug": "holidays-vacations-cheat-sheet",
   "title": "Holidays-Vacations Cheat Sheet",
   "description": "Everything you will need to enjoy a trip away from home.",
-  "tags": ["holidays", "vacations"],
+  "tags": [
+    {
+      "name": "holidays",
+      "slug": "holidays",
+      "count": 1
+    },
+    {
+      "name": "vacations",
+      "slug": "vacations",
+      "count": 1
+    }
+  ],
   "content": "# Holidays-Vacations Cheat Sheet\n\nEverything you will need to enjoy a trip away from home.\n\n## Holiday - Documents\n\n- Passports / ID / Driving License\n- Photocopy of ID stored separately\n- Tickets / Reserv­ation Documents\n- Foreign Currency\n- Travellers Cheques\n- Credit Card\n- Medical Insurance Card\n- Travel Insurance Documents / AAA card\n\n## Holiday - First Aid / Medica­tions\n\n- Regular Medica­tions - enough for entire trip and some spares that should be stored separately\n- Parace­tamol\n- Ibuprofen\n- Anti-D­iarrhea Tablets\n- Insect Bite Cream\n- Bug Spray\n- Anti-b­act­erial Hand Gel\n- Plasters / Blister plaster\n\n## Holiday - To Do Before Leaving\n\n- Charge Batteries\n- Clear out fridge­/cu­pboards\n- Water Plants\n- Lock Windows\n- Wash Up\n- Switch off electr­onics except fridge­/fr­eezer\n\n## Holiday - Electr­oni­cs/­Ent­ert­ainment\n\n- Outlet Adapters suitable for region\n- Kindle / E-Reader / Books\n- Laptop / Charger\n- Camera\n- Camera Charger / Batteries\n- SD Card / Film\n- Phone Chargers\n- Hair Dryer\n- Electric Razor / Charger\n- Playing Cards / Travel boardgames\n\n## Holiday - Toiletries\n\n- Contact Lenses / Spare Glasses\n- Shampoo / Condit­ioner\n- Soap / Shower gel\n- Wash Cloths\n- Toothpaste\n- Toothb­rushes\n- Razor / Shave gel\n- Moistu­riser\n- Deodorant\n- Hair Products\n- Hair Brushes / Bands\n- Make-Up\n- Make-Up Remover\n- Simple Jewellery\n\n## Holiday - Winter - Skiing\n\n- High Factor Sun Screen for face\n- Sunglasses / Goggles\n- Gloves\n- Scarf\n- Hat\n- Thick Socks\n- Thermals\n- Walking Boots\n- Salopettes\n- Jacket\n- Skis\n- Boots\n- Poles\n- Snowboard\n\n## Holiday - Summer\n\n- Sunglasses\n- Sunscreen\n- Sun Hat\n- After Sun\n- Swim Wear\n- Flip Flops/ Sandals\n- Swimming Goggles\n\n### Resources\n\n- [Holidays / Vacations Cheat Sheet](https://cheatography.com/spaceduck/cheat-sheets/holidays-vacations/)\n\n"
 }
