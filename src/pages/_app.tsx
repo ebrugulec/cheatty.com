@@ -9,6 +9,8 @@ import NProgress from "nprogress";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 
+NProgress.configure({ showSpinner: false });
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 

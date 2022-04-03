@@ -9,11 +9,12 @@ const Header = () => {
 
   return (
     <header data-testid="header" className={styles.header}>
-      <div className={styles.headerBrand}>
-        <Link href="/">
-          <a>LOGO</a>
-        </Link>
-      </div>
+      <Link href="/">
+        <a className={styles.headerBrand}>
+          <Icon icon="pages" size={20} />
+          Cheatty
+        </a>
+      </Link>
       <div className={styles.headerAction}>
         <div id="searchWrapper" />
         <Icon
