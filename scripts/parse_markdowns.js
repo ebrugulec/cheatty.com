@@ -3,7 +3,7 @@ const fs = require("fs");
 const slugify = require("slugify");
 const path = require("path");
 
-glob(path.join(__dirname, "../src/markdown/*.md"), function (err, files) {
+glob(path.join(__dirname, "../src/markdowns/*.md"), function (err, files) {
   const markdowns = [];
 
   if (err) throw err;
