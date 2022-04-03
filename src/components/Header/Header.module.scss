@@ -3,7 +3,7 @@
   align-items: center;
   border-bottom: 1px solid var(--bg-2);
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 50px;
   color: var(--txt-1);
 
   &Action {
@@ -19,6 +19,16 @@
 
     a {
       color: var(--txt-1);
+    }
+  }
+
+  &ThemeSwitch {
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1) rotate(45deg);
+      color: var(--txt-3);
     }
   }
 }
