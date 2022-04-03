@@ -19,7 +19,6 @@ tags.forEach((tag) => {
   urls.push(url);
 });
 
-console.log(__dirname);
 const filePath = path.join(__dirname, "../public/sitemap.txt");
 
 fs.writeFileSync(filePath, urls.join("\n"), {
