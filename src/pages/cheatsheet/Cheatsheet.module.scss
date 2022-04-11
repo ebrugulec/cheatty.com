@@ -17,5 +17,12 @@
 
   h1 {
     color: var(--txt-3);
+    margin-top: 0;
+  }
+
+  .readingTime {
+    margin-top: 25px;
+    font-size: 12px;
+    font-style: italic;
   }
 }

@@ -9,6 +9,7 @@ import { MarkdownPropsWithContent } from "@components/Card";
 import Tags from "@components/Tags";
 
 import styles from "./Cheatsheet.module.scss";
+import { readingTime } from "@utils/common";
 
 const CheatsheetDetail = ({
   title,
@@ -17,6 +18,8 @@ const CheatsheetDetail = ({
   content,
   error,
 }: MarkdownPropsWithContent) => {
+  const contentReadingTime = readingTime(content)
+
   return (
     <div className={styles.page}>
       {error ? (
@@ -28,6 +31,7 @@ const CheatsheetDetail = ({
             <meta name="description" content={description} />
           </Head>
           <Tags tags={tags} />
+          <div className={styles.readingTime}>{contentReadingTime} min read</div>
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
