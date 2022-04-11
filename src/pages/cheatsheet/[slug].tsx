@@ -3,6 +3,7 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { twilight } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import { MarkdownPropsWithContent } from "@components/Card";
 import Tags from "@components/Tags";
@@ -35,6 +36,7 @@ const CheatsheetDetail = ({
                 return !inline && match ? (
                   <SyntaxHighlighter
                     language={match[1]}
+                    style={twilight}
                     PreTag="div"
                     {...props}
                   >
