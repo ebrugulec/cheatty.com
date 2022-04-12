@@ -1,15 +1,18 @@
+import { useEffect, useState } from "react";
 import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { twilight } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { twilight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-import { MarkdownPropsWithContent } from "@components/Card";
+import Card, { MarkdownProps, MarkdownPropsWithContent } from "@components/Card";
 import Tags from "@components/Tags";
 
 import styles from "./Cheatsheet.module.scss";
 import { readingTime } from "@utils/common";
+
+import markdowns from "@data/markdowns.json";
 
 const CheatsheetDetail = ({
   title,
@@ -17,12 +20,35 @@ const CheatsheetDetail = ({
   tags,
   content,
   error,
+  slug
 }: MarkdownPropsWithContent) => {
+  const [similarMarkdowns, setSimilarMarkdowns] = useState<MarkdownProps[] | []>([])
+
   const contentReadingTime = readingTime(content)
+  
+  useEffect(() => {
+    if (!content) return
+
+    const contentLowerCase = content.toLowerCase();
+    const similarMarkdownList: MarkdownProps[] = [];
+
+    for (let markdown of markdowns) {
+      if (similarMarkdownList.length > 2) break
+
+      for (let markdownTag of markdown.tags) {
+        if (contentLowerCase.includes(markdownTag.name) && markdown.slug !== slug) {
+          similarMarkdownList.push(markdown)
+          break
+        }
+      }
+    }
+
+    setSimilarMarkdowns(similarMarkdownList)
+  }, [])
 
   return (
     <div className={styles.page}>
-      {error ? (
+      {error && !content ? (
         <div>{error}</div>
       ) : (
         <>
@@ -58,6 +84,17 @@ const CheatsheetDetail = ({
           </ReactMarkdown>
         </>
       )}
+      <div className={styles.similarMarkdowns}>
+        {similarMarkdowns.map((markdown: MarkdownProps) => (
+          <Card
+            key={markdown.slug}
+            title={markdown.title}
+            slug={markdown.slug}
+            description={markdown.description}
+            tags={markdown.tags}
+          />
+        ))}
+      </div>
     </div>
   );
 };
