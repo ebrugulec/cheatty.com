@@ -15,6 +15,7 @@ export interface MarkdownProps {
 export interface MarkdownPropsWithContent extends MarkdownProps {
   content: string;
   error?: string;
+  similarMarkdowns?: MarkdownProps[]
 }
 
 const Card = ({ title, slug, description, tags }: MarkdownProps) => {
