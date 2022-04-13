@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
@@ -12,39 +12,15 @@ import Tags from "@components/Tags";
 import styles from "./Cheatsheet.module.scss";
 import { readingTime } from "@utils/common";
 
-import markdowns from "@data/markdowns.json";
-
 const CheatsheetDetail = ({
   title,
   description,
   tags,
   content,
   error,
-  slug
+  similarMarkdowns
 }: MarkdownPropsWithContent) => {
-  const [similarMarkdowns, setSimilarMarkdowns] = useState<MarkdownProps[] | []>([])
-
   const contentReadingTime = readingTime(content)
-  
-  useEffect(() => {
-    if (!content) return
-
-    const contentLowerCase = content.toLowerCase();
-    const similarMarkdownList: MarkdownProps[] = [];
-
-    for (let markdown of markdowns) {
-      if (similarMarkdownList.length > 2) break
-
-      for (let markdownTag of markdown.tags) {
-        if (contentLowerCase.includes(markdownTag.name) && markdown.slug !== slug) {
-          similarMarkdownList.push(markdown)
-          break
-        }
-      }
-    }
-
-    setSimilarMarkdowns(similarMarkdownList)
-  }, [])
 
   return (
     <div className={styles.page}>
@@ -85,7 +61,7 @@ const CheatsheetDetail = ({
         </>
       )}
       <div className={styles.similarMarkdowns}>
-        {similarMarkdowns.map((markdown: MarkdownProps) => (
+        {similarMarkdowns?.map((markdown: MarkdownProps) => (
           <Card
             key={markdown.slug}
             title={markdown.title}
@@ -104,7 +80,23 @@ export default CheatsheetDetail;
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   try {
     const markdown = await import(`../../content/${query.slug}.json`);
+    const markdowns = await import('../../data/markdowns.json');
     const { content, slug, title, description, tags } = markdown;
+
+    const allMarkdowns = markdowns.default
+    const contentLowerCase = content.toLowerCase();
+    const similarMarkdowns: MarkdownProps[] = [];
+
+    for (let markdown of allMarkdowns) {
+      if (similarMarkdowns.length > 2) break
+
+      const markdownTags = markdown.tags.map(({ name }) => name)
+      const isTagExists = markdownTags.some(tag => contentLowerCase.includes(tag))
+
+      if (isTagExists && markdown.slug !== slug) {
+        similarMarkdowns.push(markdown)
+      }
+    }
 
     return {
       props: {
@@ -113,6 +105,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
         title,
         description,
         tags,
+        similarMarkdowns
       },
     };
   } catch {
